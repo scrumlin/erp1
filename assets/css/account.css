@@ -1,0 +1,66 @@
+/*
+Author       : Pranaya
+Template Name: Doccure - Bootstrap Admin Template
+Version      : 1.3
+*/
+
+
+/* .page-wrapper .content {
+  padding: 0 5px 1.875rem 5px;
+} */
+
+.page-header,
+.inner-navbar3 {
+  border-bottom: 1px solid lightgray;
+}
+
+.right-nav-menues ul,
+.inner-navbar1 ul {
+  list-style: none;
+}
+.right-nav-menues ul li,
+.inner-navbar1 ul li,
+.inner-navbar3 ul li{
+  margin-left: 20px;
+  color: grey;
+  text-align: center;
+}
+
+.inner-navbar1,
+.inner-navbar3 {
+  padding: 0;
+  margin: 0;
+  text-align: right;
+  display: block;
+}
+.inner-navbar1 ul,
+.inner-navbar3 ul {
+  display: inline-block;
+  margin-bottom: 0;
+}
+.inner-navbar1 ul li,
+.inner-navbar3 ul li {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.inner-navbar2 {
+  margin: 0%;
+  padding: 0;
+  color: #fff;
+  border: 0px solid lightgray;
+  background: #334f9a !important;
+}
+.inner-navbar2 a {
+  color: #fff;
+}
+
+.table .thead-green th {
+  color: #000;
+  background-color: #fff;
+  border-color: #454d55;
+}
+
+.remove {
+  color: red;
+}

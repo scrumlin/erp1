@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+ 
+
+<head>
+
+        <meta charset="utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+        <title>Maxim ERP</title>
+
+		
+
+		<!-- Favicon -->
+
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+		
+
+		<!-- Bootstrap CSS -->
+
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+		
+
+		<!-- Fontawesome CSS -->
+
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+		
+
+		<!-- Feathericon CSS -->
+
+        <link rel="stylesheet" href="assets/css/feathericon.min.css">
+
+		
+
+		<!-- Datatables CSS -->
+
+		<link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
+
+        
+
+        <!-- Select2 CSS -->
+
+		<link rel="stylesheet" href="assets/css/select2.min.css">
+
+		
+
+		<!-- Main CSS -->
+
+        <link rel="stylesheet" href="assets/css/style.css">
+
+		
+
+		<!--[if lt IE 9]>
+
+			<script src="assets/js/html5shiv.min.js"></script>
+
+			<script src="assets/js/respond.min.js"></script>
+
+		<![endif]-->
+
+		<style>
+
+		.table-ed td{ white-space:normal;}
+
+		.table-ed .form-control{ background:none; border:0px; }
+
+		.payroll-list {
+
+			margin: 0px;
+
+			padding: 0px;
+
+			list-style: none;
+
+		}
+
+				.payroll-list li {
+
+			font-size: 16px;
+
+			padding: 0 0 5px 0;
+
+		}	
+
+				.payroll-list li span {
+
+			display: inline-block;
+
+			width: 155px;
+
+		}
+
+		.table-pay-detail td{padding-top:5px; padding-bottom:5px;}
+
+		</style>
+
+    </head>
+
+    <body>
+	
+		<!-- Main Wrapper -->
+        <div class="main-wrapper">		
+			<!-- Header -->
+            <div class="header">			
+				<!-- Logo -->
+                <div class="header-left">
+                    <a href="index.html" class="logo">
+						<img src="assets/img/maxim_logo.png" alt="Logo">
+					</a>
+					<a href="index.html" class="logo logo-small">
+						<img src="assets/img/logo-small.png" alt="Logo" width="30" height="30">
+					</a>
+                </div>
+				<!-- /Logo -->
+				
+				<a href="javascript:void(0);" id="toggle_btn">
+					<i class="fe fe-text-align-left"></i>
+				</a>
+				
+				<!-- Mobile Menu Toggle -->
+				<a class="mobile_btn" id="mobile_btn">
+					<i class="fa fa-bars"></i>
+				</a>
+				<!-- /Mobile Menu Toggle -->				
+            </div>
+			<!-- /Header -->			
+			<!-- Sidebar -->
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-inner slimscroll">
+					<div id="sidebar-menu" class="sidebar-menu">
+						<ul>
+							<li> 
+								<a href="index.html"><i class="fe fe-home"></i> <span style="color:#ff0;">Dashboard</span></a>
+							</li>
+                            <li>
+                            	<a href="javascript:void(0);"><i class="fa fa-gear"></i><span>Masters</span></a>
+                            </li>
+                            <li class="submenu">
+                            	<a href="javascript:void(0);"><i class="fa fa-cubes"></i><span>Procurement</span><span class="menu-arrow"></span></a>
+                                <ul class="smenu">
+                                	<li class="submenu"><a href="javascript:void(0);"><span>Masters</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="procurment_master_item_master.html">Item Master</a></li>
+                                            <li><a href="procurment_master_item_category_master.html">Item Category Master</a></li>
+                                            <li><a href="procurment_master_tax_code_master.html">Tax Code Master</a></li>
+											<li><a href="procurment_master_unit_master.html">Unit Master</a></li>
+                                            <li><a href="procurment_master_ware_house_master.html">Ware House Master</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Transactions</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            
+											<li><a href="procurment_transactions_material_request.html">Material Request</a></li>
+                                            <li><a href="procurment_transactions_material_issue.html">Material Issue</a></li>
+                                            <li><a href="procurment_transactions_material_receipts.html">Material Receipts</a></li>
+											<li><a href="procurment_transactions_material_consumption.html">Material Consumption</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Reports</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Report 1</a></li>
+                                            <li><a href="javascript:void(0);">Report 2</a></li>
+                                            <li><a href="javascript:void(0);">Report 3</a></li>
+                                            <li><a href="javascript:void(0);">Report 4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="submenu">
+                            	<a href="javascript:void(0);"><i class="fa fa-bank"></i><span>Accounts</span><span class="menu-arrow"></span></a>
+                                <ul class="smenu">
+                                	<li><a href="account_master.html"><span>Masters</span> </a></li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Transactions</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Transactions 1</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 2</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 3</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Reports</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Report 1</a></li>
+                                            <li><a href="javascript:void(0);">Report 2</a></li>
+                                            <li><a href="javascript:void(0);">Report 3</a></li>
+                                            <li><a href="javascript:void(0);">Report 4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="submenu">
+                            	<a href="javascript:void(0);"><i class="fa fa-group"></i><span>HR & Payroll</span><span class="menu-arrow"></span></a>
+                                <ul class="smenu">
+                                	<li><a href="payroll_master.html"><span>Masters</span></a> </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Transactions</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="employee_detail.html"><span>Employee Detail</span></a></li>
+                                            <li><a href="attendance.html"><span>Attendance</span></a></li>
+                                            <li><a href="employee_earnings_deductions.html"><span>Earnings & Deductions</span></a></li>
+                                            <li><a href="monthly_deductions.html"><span>Monthly Deductions</span></a></li>
+                                            <li><a href="monthly_earnings.html"><span>Monthly Earnings</span></a></li>
+                                            <li><a href="payroll_processing.html" class="active"><span>Payroll Processing</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Reports</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Report 1</a></li>
+                                            <li><a href="javascript:void(0);">Report 2</a></li>
+                                            <li><a href="javascript:void(0);">Report 3</a></li>
+                                            <li><a href="javascript:void(0);">Report 4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+							<li class="submenu">
+                            	<a href="javascript:void(0);"><i class="fa fa-gears"></i><span>Maintenance</span><span class="menu-arrow"></span></a>
+                                <ul class="smenu">
+                                	<li class="submenu"><a href="javascript:void(0);"><span>Masters</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Masters 1</a></li>
+                                            <li><a href="javascript:void(0);">Masters 2</a></li>
+                                            <li><a href="javascript:void(0);">Masters 3</a></li>
+                                            <li><a href="javascript:void(0);">Masters 4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Transactions</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Transactions 1</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 2</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 3</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Reports</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Report 1</a></li>
+                                            <li><a href="javascript:void(0);">Report 2</a></li>
+                                            <li><a href="javascript:void(0);">Report 3</a></li>
+                                            <li><a href="javascript:void(0);">Report 4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+							<li class="submenu">
+                            	<a href="javascript:void(0);"><i class="fa fa-gears"></i><span>Settings</span><span class="menu-arrow"></span></a>
+                                <ul class="smenu">
+									<li><a href="manageeuser.html"><i class="fe fe-users"></i> <span>Manage User</span></a></li>
+									<li><a href="changepassword.html"><i class="fa fa-unlock-alt" aria-hidden="true"></i> <span>Change Password</span></a></li>
+								</ul>					
+							</li>
+							<li><a href="login.html"><i class="fa fa-power-off" aria-hidden="true"></i> <span style="color:#ff0;">Logout</span></a>
+						</ul>
+					</div>
+                </div>
+            </div>
+			<!-- /Sidebar -->					
+
+			<!-- Page Wrapper -->
+
+            <div class="page-wrapper">
+
+                <div class="content container-fluid">				
+
+					<!-- Page Header -->
+
+					<div class="page-header">
+
+						<div class="row">
+
+							<div class="col-sm-7 col-auto">
+
+								<h3 class="page-title">Payroll Processing</h3>
+
+								<ul class="breadcrumb">
+
+									<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+
+									<li class="breadcrumb-item"><a href="#null">Payroll</a></li>									
+
+									<li class="breadcrumb-item active">Payroll Processing</li>
+
+								</ul>
+
+							</div>
+
+							
+
+						</div>
+
+					</div>
+
+					<!-- /Page Header -->
+
+					<div class="row">
+
+						<div class="col-sm-12">
+
+							<div class="card">
+
+								<div class="card-body">
+
+									<form>
+
+                                        <div class="row form-row">                                        	
+
+                                        	<div class="col-12 col-sm-12 col-md-6">
+
+                                            	<div class="row form-row">
+
+                                                	<div class="col-12 col-sm-12 col-md-6">
+
+                                                    	<div class="form-group">
+
+                                                            <label>Year *</label>											
+
+                                                            <select class="select1">
+
+                                                                <option>Select Year</option>
+
+                                                                <option value="1">2019</option>
+
+                                                                <option value="2">2020</option>
+
+                                                                <option value="3">2021</option>                                                       
+
+                                                            </select>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-12 col-sm-12 col-md-6">
+
+                                                    	<div class="form-group">
+
+                                                            <label>Month *</label>											
+
+                                                            <select class="select1">
+
+                                                                <option>Select Month</option>
+
+                                                                <option value="1">January</option>
+
+                                                                <option value="2">February</option>
+
+                                                                <option value="3">March</option>
+
+                                                                <option value="4">April</option>
+
+                                                                <option value="5">May</option>
+
+                                                                <option value="6">June</option>
+
+                                                                <option value="7">July</option>
+
+                                                                <option value="8">August</option>
+
+                                                                <option value="9">September</option>
+
+                                                                <option value="10">October</option>
+
+                                                                <option value="11">November</option>
+
+                                                                <option value="12">December</option>                                                       
+
+                                                            </select>
+
+                                                        </div>
+
+                                                    </div> 
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="col-12 col-sm-12 col-md-6"></div>
+
+                                                <div class="col-12 col-sm-12 col-md-3">
+
+                                                    <div class="form-group">
+
+                                                        <label>Location</label>											
+
+                                                        <select class="select1">
+
+                                                            <option>Select Location</option>
+
+                                                            <option value="1">Location 1</option>
+
+                                                            <option value="2">Location 2</option>
+
+                                                            <option value="3">Location 3</option>
+
+                                                            <option value="4">Location 4</option>                                                       
+
+                                                        </select>
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="col-12 col-sm-12 col-md-3">
+
+                                                    <div class="form-group">
+
+                                                        <label>Category</label>
+
+                                                        <select class="select1">
+
+                                                            <option>Select Category</option>
+
+                                                            <option value="1">Category 1</option>
+
+                                                            <option value="2">Category 2</option>
+
+                                                            <option value="3">Category 3</option>
+
+                                                            <option value="4">Category 4</option>                                                       
+
+                                                        </select>
+
+                                                    </div>
+
+                                                </div>  
+
+                                                <div class="col-12 col-sm-12 col-md-3">
+
+                                                    <div class="form-group">
+
+                                                        <label>Department</label>
+
+                                                        <select class="select1">
+
+                                                            <option>Select Department</option>
+
+                                                            <option value="1">Department 1</option>
+
+                                                            <option value="2">Department 2</option>
+
+                                                            <option value="3">Department 3</option>
+
+                                                            <option value="4">Department 4</option>
+
+                                                        </select>
+
+                                                    </div>
+
+                                                </div> 
+
+                                                <div class="col-12 col-sm-12 col-md-3">
+
+                                                    <div class="form-group">
+
+                                                        <label>Department</label>
+
+                                                        <select class="select1">
+
+                                                            <option>Select Department</option>
+
+                                                            <option value="1">Department 1</option>
+
+                                                            <option value="2">Department 2</option>
+
+                                                            <option value="3">Department 3</option>
+
+                                                            <option value="4">Department 4</option>
+
+                                                        </select>
+
+                                                    </div>
+
+                                                </div>                                               	                                  
+
+                                           <!-- <div class="col-12 col-sm-12 col-md-3">
+
+                                                <div class="form-group">
+
+                                                    <button type="button" class="btn btn-success" style="padding: 7px 40px; margin-top: 32px;">Process All Employees</button>
+
+                                                </div>
+
+                                            </div>	-->	
+
+                                        </div>	                                        
+
+                                    </form>	
+
+								</div>
+
+							</div>
+
+						</div>			
+
+						<div class="col-sm-12">
+
+							<div class="card">
+
+								<div class="card-body" style="background:#fff; border-radius:0px;">
+
+									<div class="table-responsive">
+
+										<table class="table table-bordered mb-0">
+
+											<thead>
+
+												<tr>
+
+													<th style="width:50%;" class="text-center">EMPLOYEE DETAILS</th>
+
+													<th style="width:50%;" class="text-center">ATTANDENCE DETAILS</th>                                                    
+
+												</tr>
+
+											</thead>
+
+											<tbody>
+
+												<tr>
+
+													<td style="width:50%;">
+
+                                                    	<ul class="payroll-list">
+
+                                                        	<li><span>Code</span>: N017</li>
+
+                                                            <li><span>Employee Name</span>: MR.NIRANJAN BEHERA</li>                                                            
+
+                                                        </ul>
+
+                                                    </td>
+
+													<td style="width:50%;">
+
+                                                    	<ul class="payroll-list">
+
+                                                        	<li><span>Days</span>: 30.00</li>
+
+                                                            <li><span>Leaves</span>: 0.00</li>
+
+                                                            <li><span>Working Days</span>: 30.00</li>
+
+                                                            <li><span>Paid Days</span>: 30.00</li>
+
+                                                        </ul>
+
+                                                    </td>
+
+												</tr>
+
+                                                <tr style="background-color: #f8f9fa;">
+
+													<th style="width:50%;" class="text-center">EARNINGS</th>
+
+													<th style="width:50%;" class="text-center">DEDUCTIONS</th>
+
+												</tr>
+
+                                                <tr>
+
+													<td style="width:50%;">
+
+                                                    	<table class="table table-bordered mb-0 table-pay-detail">
+
+                                                        	<thead>
+
+                                                                <tr>
+
+                                                                    <th>Name</th>
+
+                                                                    <th class="text-right">Value</th>
+
+                                                                </tr>
+
+                                                            </thead>
+
+															<tbody>
+
+                                                                <tr>
+
+                                                                    <td>BASIC</td>
+
+                                                                    <td class="text-right">35900</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td>DEARNESS ALLOWANCE</td>
+
+                                                                    <td class="text-right">6103</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td>HOUSE RENT ALLOWANCE</td>
+
+                                                                    <td class="text-right">2298</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td>WORKING ALLOWANCE</td>
+
+                                                                    <td class="text-right">0</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td>CONVEYANCE ALLOWANCE </td>
+
+                                                                    <td class="text-right">900</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td>MEDICAL ALLOWANCE</td>
+
+                                                                    <td class="text-right">750</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td>MISCELLANEOUS</td>
+
+                                                                    <td class="text-right">0</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td>DEARNESS PAY</td>
+
+                                                                    <td class="text-right">0</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td>WASHING ALLOWANCE</td>
+
+                                                                    <td class="text-right">50</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td>GRADE PAY</td>
+
+                                                                    <td class="text-right">50</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td>MISC</td>
+
+                                                                    <td class="text-right">0</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td>ARREAR</td>
+
+                                                                    <td class="text-right">0</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td>OTHER</td>
+
+                                                                    <td class="text-right">280</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td>Travel Expences Earnings</td>
+
+                                                                    <td class="text-right">50</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td colspan="2"><strong>INPUTS-EARNINGS </strong></td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td>OT AMT </td>
+
+                                                                    <td class="text-right">0</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td>EXTRA AMT </td>
+
+                                                                    <td class="text-right">20000</td>
+
+                                                                </tr>
+
+                                                            </tbody>
+
+                                                        </table>	
+
+                                                    </td>
+
+													<td style="width:50%;">
+
+                                                    	<table class="table table-bordered mb-0 table-pay-detail">
+
+                                                        	<thead>
+
+                                                                <tr>
+
+                                                                    <th>Name</th>
+
+                                                                    <th class="text-right">Value</th>
+
+                                                                </tr>
+
+                                                            </thead>
+
+															<tbody>
+
+                                                                <tr>
+
+                                                                    <td>BASIC</td>
+
+                                                                    <td class="text-right">35900</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td>EMPLOYEES PROVIDENT FUND</td>
+
+                                                                    <td class="text-right">6103</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td>GROUP SAVINGS CUMULATIVE ACCUMULATION</td>
+
+                                                                    <td class="text-right">2298</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td>O T C S</td>
+
+                                                                    <td class="text-right">0</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td>PROFESSIONAL TAX </td>
+
+                                                                    <td class="text-right">900</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td>INCOME TAX</td>
+
+                                                                    <td class="text-right">750</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td>GROUP SAVINGS LINKED INSURANCE</td>
+
+                                                                    <td class="text-right">0</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td>EMPLOYEES STATE INSURANCE</td>
+
+                                                                    <td class="text-right">0</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td>HRA DEDUCTION</td>
+
+                                                                    <td class="text-right">50</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td>PUBLIC PROVIDENT FUND</td>
+
+                                                                    <td class="text-right">50</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td>Travel Expences Deductions</td>
+
+                                                                    <td class="text-right">0</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td colspan="2"><strong>ADVANCE/LOANS </strong></td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td>Loans</td>
+
+                                                                    <td class="text-right">0</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td>LIC</td>
+
+                                                                    <td class="text-right">213</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td>LIC</td>
+
+                                                                    <td class="text-right">139</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td>LIC</td>
+
+                                                                    <td class="text-right">341</td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td colspan="2"><strong>INPUTS-DEDUCTIONS  </strong></td>
+
+                                                                </tr>
+
+                                                                <tr>
+
+                                                                    <td>OTHER DEDUCTION</td>
+
+                                                                    <td class="text-right">0</td>
+
+                                                                </tr>                                                                
+
+                                                            </tbody>
+
+                                                        </table>   
+
+                                                    </td>
+
+												</tr>
+
+                                                <tr>
+
+                                                    <td style="width:50%;" class="text-right">
+
+                                                    	<strong>Total Earnings: 65000</strong>
+
+                                                    </td>
+
+                                                    <td style="width:50%;" class="text-right">
+
+                                                    	<strong>Total Deductions: 8000</strong>
+
+                                                    </td>
+
+												</tr>
+
+                                                <tr>
+
+                                                    <td colspan="2" class="text-right">
+
+                                                    	<strong>NetPay : 57000</strong>
+
+                                                    </td>
+
+												</tr>													
+
+											</tbody>
+
+										</table>
+
+									</div>  
+
+                                    <div class="form-group" style="margin-bottom:0px; margin-top:20px;">
+
+                                        <button type="submit" class="btn btn-danger" style="padding: 7px 40px;">Delete</button><button type="submit" class="btn btn-success pull-right" style="padding: 7px 40px;">Update</button>
+
+                                    </div>                                  
+
+								</div>
+
+							</div>
+
+						</div>
+
+                        
+
+                        
+
+                    </div>
+
+				</div>			
+
+			</div>
+
+			<!-- /Page Wrapper -->
+
+			
+
+			
+
+        </div>
+
+		<!-- /Main Wrapper -->
+
+		
+
+		<!-- jQuery -->
+
+        <script src="assets/js/jquery-3.2.1.min.js"></script>
+
+		
+
+		<!-- Bootstrap Core JS -->
+
+        <script src="assets/js/popper.min.js"></script>
+
+        <script src="assets/js/bootstrap.min.js"></script>
+
+		
+
+		<!-- Slimscroll JS -->
+
+        <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+        <!-- Select2 JS -->
+
+		<script src="assets/js/select2.min.js"></script>		
+
+		<!-- Datatables JS -->
+
+		<script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+
+		<script src="assets/plugins/datatables/datatables.min.js"></script>
+
+		
+
+		<!-- Custom JS -->
+
+		<script  src="assets/js/script.js"></script>
+
+		
+
+    </body>
+
+
+
+</html>

@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+ 
+
+<head>
+
+        <meta charset="utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+        <title>Maxim ERP</title>
+
+		
+
+		<!-- Favicon -->
+
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+		
+
+		<!-- Bootstrap CSS -->
+
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+		
+
+		<!-- Fontawesome CSS -->
+
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+		
+
+		<!-- Feathericon CSS -->
+
+        <link rel="stylesheet" href="assets/css/feathericon.min.css">
+
+		
+
+		<!-- Datatables CSS -->
+
+		<link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
+
+        
+
+        <!-- Select2 CSS -->
+
+		<link rel="stylesheet" href="assets/css/select2.min.css">
+
+		
+
+		<!-- Main CSS -->
+
+        <link rel="stylesheet" href="assets/css/style.css">
+
+		
+
+		<!--[if lt IE 9]>
+
+			<script src="assets/js/html5shiv.min.js"></script>
+
+			<script src="assets/js/respond.min.js"></script>
+
+		<![endif]-->
+
+		<style>
+
+		.table-ed td{ white-space:normal;}
+
+		.table-ed .form-control{ background:none; border:0px; }
+
+		.payroll-list {
+
+			margin: 0px;
+
+			padding: 0px;
+
+			list-style: none;
+
+		}
+
+				.payroll-list li {
+
+			font-size: 16px;
+
+			padding: 0 0 5px 0;
+
+		}	
+
+				.payroll-list li span {
+
+			display: inline-block;
+
+			width: 155px;
+
+		}
+
+		.table-pay-detail td{padding-top:5px; padding-bottom:5px;}
+
+		/***/
+
+		.profile .btn{ border-radius:999px; text-transform:uppercase;}
+
+		.profile .info{ text-align:center; color:#A7A7A7; text-transform:uppercase; padding:10px;}
+
+		.profile .info strong{ font-size:40px; color:#000; display:block;}
+
+		.profile .card, .profile .card-body,.profile .card-footer{ border-radius:0px;}
+
+		.profile table td{ padding:4px 5px;}
+
+		.profile table .label{ width:48%; font-weight:600;}
+
+		.profile table .detail{ width:50%;color: #0073c4; padding-left: 10px; font-weight:normal;}
+
+		</style>
+
+    </head>
+
+    <body>
+	
+		<!-- Main Wrapper -->
+        <div class="main-wrapper">		
+			<!-- Header -->
+            <div class="header">			
+				<!-- Logo -->
+                <div class="header-left">
+                    <a href="index.html" class="logo">
+						<img src="assets/img/maxim_logo.png" alt="Logo">
+					</a>
+					<a href="index.html" class="logo logo-small">
+						<img src="assets/img/logo-small.png" alt="Logo" width="30" height="30">
+					</a>
+                </div>
+				<!-- /Logo -->
+				
+				<a href="javascript:void(0);" id="toggle_btn">
+					<i class="fe fe-text-align-left"></i>
+				</a>
+				
+				<!-- Mobile Menu Toggle -->
+				<a class="mobile_btn" id="mobile_btn">
+					<i class="fa fa-bars"></i>
+				</a>
+				<!-- /Mobile Menu Toggle -->				
+            </div>
+			<!-- /Header -->			
+			<!-- Sidebar -->
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-inner slimscroll">
+					<div id="sidebar-menu" class="sidebar-menu">
+						<ul>
+							<li> 
+								<a href="index.html"><i class="fe fe-home"></i> <span style="color:#ff0;">Dashboard</span></a>
+							</li>
+                            <li>
+                            	<a href="javascript:void(0);"><i class="fa fa-gear"></i><span>Masters</span></a>
+                            </li>
+                            <li class="submenu">
+                            	<a href="javascript:void(0);"><i class="fa fa-cubes"></i><span>Procurement</span><span class="menu-arrow"></span></a>
+                                <ul class="smenu">
+                                	<li class="submenu"><a href="javascript:void(0);"><span>Masters</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="procurment_master_item_master.html">Item Master</a></li>
+                                            <li><a href="procurment_master_item_category_master.html">Item Category Master</a></li>
+                                            <li><a href="procurment_master_tax_code_master.html">Tax Code Master</a></li>
+											<li><a href="procurment_master_unit_master.html">Unit Master</a></li>
+                                            <li><a href="procurment_master_ware_house_master.html">Ware House Master</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Transactions</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            
+											<li><a href="procurment_transactions_material_request.html">Material Request</a></li>
+                                            <li><a href="procurment_transactions_material_issue.html">Material Issue</a></li>
+                                            <li><a href="procurment_transactions_material_receipts.html">Material Receipts</a></li>
+											<li><a href="procurment_transactions_material_consumption.html">Material Consumption</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Reports</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Report 1</a></li>
+                                            <li><a href="javascript:void(0);">Report 2</a></li>
+                                            <li><a href="javascript:void(0);">Report 3</a></li>
+                                            <li><a href="javascript:void(0);">Report 4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="submenu">
+                            	<a href="javascript:void(0);"><i class="fa fa-bank"></i><span>Accounts</span><span class="menu-arrow"></span></a>
+                                <ul class="smenu">
+                                	<li><a href="account_master.html"><span>Masters</span> </a></li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Transactions</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Transactions 1</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 2</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 3</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Reports</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Report 1</a></li>
+                                            <li><a href="javascript:void(0);">Report 2</a></li>
+                                            <li><a href="javascript:void(0);">Report 3</a></li>
+                                            <li><a href="javascript:void(0);">Report 4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="submenu">
+                            	<a href="javascript:void(0);"><i class="fa fa-group"></i><span>HR & Payroll</span><span class="menu-arrow"></span></a>
+                                <ul class="smenu">
+                                	<li><a href="payroll_master.html"><span>Masters</span></a> </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Transactions</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="employee_detail.html" class="active"><span>Employee Detail</span></a></li>
+                                            <li><a href="attendance.html"><span>Attendance</span></a></li>
+                                            <li><a href="employee_earnings_deductions.html"><span>Earnings & Deductions</span></a></li>
+                                            <li><a href="monthly_deductions.html"><span>Monthly Deductions</span></a></li>
+                                            <li><a href="monthly_earnings.html"><span>Monthly Earnings</span></a></li>
+                                            <li><a href="payroll_processing.html"><span>Payroll Processing</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Reports</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Report 1</a></li>
+                                            <li><a href="javascript:void(0);">Report 2</a></li>
+                                            <li><a href="javascript:void(0);">Report 3</a></li>
+                                            <li><a href="javascript:void(0);">Report 4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+							<li class="submenu">
+                            	<a href="javascript:void(0);"><i class="fa fa-gears"></i><span>Maintenance</span><span class="menu-arrow"></span></a>
+                                <ul class="smenu">
+                                	<li class="submenu"><a href="javascript:void(0);"><span>Masters</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Masters 1</a></li>
+                                            <li><a href="javascript:void(0);">Masters 2</a></li>
+                                            <li><a href="javascript:void(0);">Masters 3</a></li>
+                                            <li><a href="javascript:void(0);">Masters 4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Transactions</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Transactions 1</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 2</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 3</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Reports</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Report 1</a></li>
+                                            <li><a href="javascript:void(0);">Report 2</a></li>
+                                            <li><a href="javascript:void(0);">Report 3</a></li>
+                                            <li><a href="javascript:void(0);">Report 4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+							<li class="submenu">
+                            	<a href="javascript:void(0);"><i class="fa fa-gears"></i><span>Settings</span><span class="menu-arrow"></span></a>
+                                <ul class="smenu">
+									<li><a href="manageeuser.html"><i class="fe fe-users"></i> <span>Manage User</span></a></li>
+									<li><a href="changepassword.html"><i class="fa fa-unlock-alt" aria-hidden="true"></i> <span>Change Password</span></a></li>
+								</ul>					
+							</li>
+							<li><a href="login.html"><i class="fa fa-power-off" aria-hidden="true"></i> <span style="color:#ff0;">Logout</span></a>
+						</ul>
+					</div>
+                </div>
+            </div>
+			<!-- /Sidebar -->				
+
+			<!-- Page Wrapper -->
+
+            <div class="page-wrapper">
+
+                <div class="content container-fluid">				
+
+					<!-- Page Header -->
+
+					
+
+					<!-- /Page Header -->
+
+					<div class="row profile">
+
+						<div class="col-md-3">
+
+							<div class="card">                            	
+
+								<div class="card-body" style="padding: 15px; background: #fff; border-radius:0px;"> 
+
+                                	<div class="text-center border-bottom">
+
+                                        <img src="assets/img/defaultProfilePic.png" id="upfile1" style="cursor:pointer; width: 135px; height: 145px; border: 1px solid #d9d9d9; padding: 10px; border-radius: 3px; margin:0 auto 10px; display:inline-block;">
+
+                                        <h4>MR.NIRANJAN BEHERA</h4>  
+
+                                    </div>  
+
+                                    <div class="border-bottom pt-2 pb-2">
+
+                                    	<p class="mb-1">Location : HEAD OFFICE</p>
+
+                                        <p class="mb-1">Department : ACCT</p>
+
+                                        <p class="mb-1">Category : PERMANET</p>
+
+                                    </div>  
+
+                                    <button class="btn btn-success btn-block mt-2 mb-2" style="cursor:default;">Working</button> 
+
+                                    <div class="border border-bottom-0 text-center info">
+
+                                    	<strong>0</strong>Advances
+
+                                    </div>
+
+                                    <div class="border border-bottom-0 text-center info">
+
+                                    	<strong>0</strong>Loans
+
+                                    </div> 
+
+                                    <div class="border text-center info">
+
+                                    	<strong>0</strong>Leave Applications
+
+                                    </div>    
+
+                                    <button class="btn btn-info btn-block mt-2 mb-2">Edit Details</button>    
+
+								</div>
+
+							</div>
+
+						</div>
+
+                        <div class="col-md-9">
+
+                        	<div class="row">
+
+                            	<div class="col-md-6">
+
+                                    <div class="card"> 
+
+                                    	<div class="card-footer" style="background:#F1F4F8; padding:8px 15px; text-transform:uppercase;"><i class="fa fa-address-card-o mr-2" ></i> General Information</div>                           	
+
+                                        <div class="card-body" style="padding: 15px; background: #fff;">
+
+                                            <table>
+
+                                            	<tr>
+
+                                                	<td class="label">Employee Code</td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">EMP00007</td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">Name</td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">MR.NIRANJAN BEHERA</td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">Joining Date </td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">16-11-2012</td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">Confirm Date </td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">16-11-2012</td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">Designation</td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail"></td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">Category</td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">PERMANET</td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">Department</td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">ACCT</td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">Location</td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">HEAD OFFICE</td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">Emp Status</td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">Working</td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">Last Working Date</td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">DD-MM-YYYY</td>
+
+                                                </tr>                                                
+
+                                            </table>
+
+                                        </div>                                        
+
+                                    </div>
+
+                                    <div class="card"> 
+
+                                    	<div class="card-footer" style="background:#F1F4F8; padding:8px 15px; text-transform:uppercase;"><i class="fa fa-address-card-o mr-2" ></i> Statutory Information </div>                          	
+
+                                        <div class="card-body" style="padding: 15px; background: #fff;">
+
+                                            <table>
+
+                                            	<tr>
+
+                                                	<td class="label">Gross </td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">22000.00</td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">Basic </td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">12000.00</td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">Pan Number </td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">PVAPP2335P</td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">PF Contribution</td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">Yes</td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">PF Number</td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">000-000-000-000-11</td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">ESI Contribution</td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">No</td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">ESI Number </td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">000-000-0011</td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">IS OT </td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">Yes</td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">OT Amount </td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">100</td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">Universal Account # </td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">999-9999-9999-15215</td>
+
+                                                </tr>   
+
+                                                <tr>
+
+                                                	<td class="label">Grade Pay  </td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">GPAY00001</td>
+
+                                                </tr>                                              
+
+                                            </table>
+
+                                        </div>                                        
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                	<div class="card">
+
+                                    	<div class="card-footer" style="background:#F1F4F8; padding:8px 15px; text-transform:uppercase;"><i class="fa fa-address-card-o mr-2" ></i> Personal Information </div>                            	
+
+                                        <div class="card-body" style="padding: 15px; background: #fff;">
+
+                                            <table>
+
+                                            	<tr>
+
+                                                	<td class="label">Gender</td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">Female</td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">Date Of Birth </td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">02-03-2021</td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">Nationality </td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">Indian</td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">Religion </td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">Hundu</td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">Caste</td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail"></td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">Marital Status </td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">Married</td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">Mobile </td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">+91-99999-00000</td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">Email </td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">ho@pumul.com</td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">Aadhar Number </td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">0000-0000-0000</td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">Education </td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail"></td>
+
+                                                </tr>                                                
+
+                                            </table>
+
+                                        </div>                                        
+
+                                    </div>
+
+                                    <div class="card"> 
+
+                                    	<div class="card-footer" style="background:#F1F4F8; padding:8px 15px; text-transform:uppercase;"><i class="fa fa-address-card-o mr-2" ></i>  Address Details</div>                           	
+
+                                        <div class="card-body" style="padding: 15px; background: #fff;">
+
+                                            <table>
+
+                                            	<tr>
+
+                                                	<td class="label">Present Address</td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail"></td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">City</td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail"></td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">Pin Code</td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">751001</td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">Permanent Address</td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">Hundu</td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">City</td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail"></td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">Pin Code</td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">751001</td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">Contact Number</td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">+91-99999-00000</td>
+
+                                                </tr>                                                                                               
+
+                                            </table>
+
+                                        </div>                                        
+
+                                    </div>
+
+                                    <div class="card">   
+
+                                    	<div class="card-footer" style="background:#F1F4F8; padding:8px 15px; text-transform:uppercase;"><i class="fa fa-address-card-o mr-2" ></i> Bank Information</div>                         	
+
+                                        <div class="card-body" style="padding: 15px; background: #fff;">
+
+                                            <table>
+
+                                            	<tr>
+
+                                                	<td class="label">Other Bank Name </td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail"></td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">Account Number</td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">000-0000-0000-000</td>
+
+                                                </tr>
+
+                                                <tr>
+
+                                                	<td class="label">IFSC Code </td>
+
+                                                    <td>:</td>
+
+                                                    <td class="detail">OBG0000025</td>
+
+                                                </tr>                                                                                       
+
+                                            </table>
+
+                                        </div>                                        
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-12">
+
+                                	<div class="card"> 
+
+                                    	<div class="card-footer" style="background:#F1F4F8; padding:8px 15px; text-transform:uppercase;"><i class="fa fa-address-card-o mr-2" ></i> Previous Experience</div>                           	
+
+                                        <div class="card-body" style="padding: 15px; background: #fff;">
+
+                                            <div class="table-responsive">
+
+												<table class="table table-bordered">
+
+												  <thead>
+
+													<tr>
+
+													  <th scope="col">Organization Name</th>
+
+													  <th scope="col">From Date</th>
+
+													  <th scope="col">To Date</th>
+
+													  <th scope="col">Total Experience</th>
+
+													  <th scope="col">Designation</th>
+
+													  <th scope="col">Last Drawn Salary</th>
+
+													</tr>
+
+												  </thead>
+
+												  <tbody>
+
+													<tr>
+
+													  <td>Organization Name</td>
+
+													  <td>From Date</td>
+
+													  <td>To Date</td>
+
+													  <td>Total Experience</td>
+
+													  <td>Designation</td>
+
+													  <td>Last Drawn Salary</td>
+
+													</tr>
+
+													<tr>
+
+													  <td>Organization Name</td>
+
+													  <td>From Date</td>
+
+													  <td>To Date</td>
+
+													  <td>Total Experience</td>
+
+													  <td>Designation</td>
+
+													  <td>Last Drawn Salary</td>
+
+													</tr>
+
+													
+
+												  </tbody>
+
+												</table>
+
+											</div>
+
+                                        </div>                                        
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>                        
+
+                    </div>
+
+				</div>			
+
+			</div>
+
+			<!-- /Page Wrapper -->
+
+			
+
+			
+
+        </div>
+
+		<!-- /Main Wrapper -->
+
+		
+
+		<!-- jQuery -->
+
+        <script src="assets/js/jquery-3.2.1.min.js"></script>
+
+		
+
+		<!-- Bootstrap Core JS -->
+
+        <script src="assets/js/popper.min.js"></script>
+
+        <script src="assets/js/bootstrap.min.js"></script>
+
+		
+
+		<!-- Slimscroll JS -->
+
+        <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+        <!-- Select2 JS -->
+
+		<script src="assets/js/select2.min.js"></script>		
+
+		<!-- Datatables JS -->
+
+		<script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+
+		<script src="assets/plugins/datatables/datatables.min.js"></script>
+
+		
+
+		<!-- Custom JS -->
+
+		<script  src="assets/js/script.js"></script>
+
+		
+
+    </body>
+
+
+
+</html>

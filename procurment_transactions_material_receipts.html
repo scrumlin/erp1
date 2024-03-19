@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	<title>Maxim ERP</title>
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+	<!-- Fontawesome CSS -->
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+	<!-- Feathericon CSS -->
+	<link rel="stylesheet" href="assets/css/feathericon.min.css">
+
+	<!-- Datatables CSS -->
+	<link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
+
+	<!-- Select2 CSS -->
+	<link rel="stylesheet" href="assets/css/select2.min.css">
+
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="assets/css/style.css">
+
+	<!-- Custom Common CSS -->
+	<link rel="stylesheet" href="assets/css/custom_common.css">
+
+	<!--[if lt IE 9]>
+			<script src="assets/js/html5shiv.min.js"></script>
+			<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+
+</head>
+
+<body>
+
+	<!-- Main Wrapper -->
+        <div class="main-wrapper">		
+			<!-- Header -->
+            <div class="header">			
+				<!-- Logo -->
+                <div class="header-left">
+                    <a href="index.html" class="logo">
+						<img src="assets/img/maxim_logo.png" alt="Logo">
+					</a>
+					<a href="index.html" class="logo logo-small">
+						<img src="assets/img/logo-small.png" alt="Logo" width="30" height="30">
+					</a>
+                </div>
+				<!-- /Logo -->
+				
+				<a href="javascript:void(0);" id="toggle_btn">
+					<i class="fe fe-text-align-left"></i>
+				</a>
+				
+				<!-- Mobile Menu Toggle -->
+				<a class="mobile_btn" id="mobile_btn">
+					<i class="fa fa-bars"></i>
+				</a>
+				<!-- /Mobile Menu Toggle -->				
+            </div>
+			<!-- /Header -->			
+			<!-- Sidebar -->
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-inner slimscroll">
+					<div id="sidebar-menu" class="sidebar-menu">
+						<ul>
+							<li> 
+								<a href="index.html"><i class="fe fe-home"></i> <span style="color:#ff0;">Dashboard</span></a>
+							</li>
+                            <li>
+                            	<a href="javascript:void(0);"><i class="fa fa-gear"></i><span>Masters</span></a>
+                            </li>
+                            <li class="submenu">
+                            	<a href="javascript:void(0);"><i class="fa fa-cubes"></i><span>Procurement</span><span class="menu-arrow"></span></a>
+                                <ul class="smenu">
+                                	<li class="submenu"><a href="javascript:void(0);"><span>Masters</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="procurment_master_item_master.html">Item Master</a></li>
+                                            <li><a href="procurment_master_item_category_master.html">Item Category Master</a></li>
+                                            <li><a href="procurment_master_tax_code_master.html">Tax Code Master</a></li>
+											<li><a href="procurment_master_unit_master.html">Unit Master</a></li>
+                                            <li><a href="procurment_master_ware_house_master.html">Ware House Master</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Transactions</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            
+											<li><a href="procurment_transactions_material_request.html">Material Request</a></li>
+                                            <li><a href="procurment_transactions_material_issue.html">Material Issue</a></li>
+                                            <li><a href="procurment_transactions_material_receipts.html" class="active">Material Receipts</a></li>
+											<li><a href="procurment_transactions_material_consumption.html">Material Consumption</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Reports</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Report 1</a></li>
+                                            <li><a href="javascript:void(0);">Report 2</a></li>
+                                            <li><a href="javascript:void(0);">Report 3</a></li>
+                                            <li><a href="javascript:void(0);">Report 4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="submenu">
+                            	<a href="javascript:void(0);"><i class="fa fa-bank"></i><span>Accounts</span><span class="menu-arrow"></span></a>
+                                <ul class="smenu">
+                                	<li><a href="account_master.html"><span>Masters</span> </a></li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Transactions</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Transactions 1</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 2</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 3</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Reports</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Report 1</a></li>
+                                            <li><a href="javascript:void(0);">Report 2</a></li>
+                                            <li><a href="javascript:void(0);">Report 3</a></li>
+                                            <li><a href="javascript:void(0);">Report 4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="submenu">
+                            	<a href="javascript:void(0);"><i class="fa fa-group"></i><span>HR & Payroll</span><span class="menu-arrow"></span></a>
+                                <ul class="smenu">
+                                	<li><a href="payroll_master.html"><span>Masters</span></a> </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Transactions</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="employee_detail.html"><span>Employee Detail</span></a></li>
+                                            <li><a href="attendance.html"><span>Attendance</span></a></li>
+                                            <li><a href="employee_earnings_deductions.html"><span>Earnings & Deductions</span></a></li>
+                                            <li><a href="monthly_deductions.html"><span>Monthly Deductions</span></a></li>
+                                            <li><a href="monthly_earnings.html"><span>Monthly Earnings</span></a></li>
+                                            <li><a href="payroll_processing.html"><span>Payroll Processing</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Reports</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Report 1</a></li>
+                                            <li><a href="javascript:void(0);">Report 2</a></li>
+                                            <li><a href="javascript:void(0);">Report 3</a></li>
+                                            <li><a href="javascript:void(0);">Report 4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+							<li class="submenu">
+                            	<a href="javascript:void(0);"><i class="fa fa-gears"></i><span>Maintenance</span><span class="menu-arrow"></span></a>
+                                <ul class="smenu">
+                                	<li class="submenu"><a href="javascript:void(0);"><span>Masters</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Masters 1</a></li>
+                                            <li><a href="javascript:void(0);">Masters 2</a></li>
+                                            <li><a href="javascript:void(0);">Masters 3</a></li>
+                                            <li><a href="javascript:void(0);">Masters 4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Transactions</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Transactions 1</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 2</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 3</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Reports</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Report 1</a></li>
+                                            <li><a href="javascript:void(0);">Report 2</a></li>
+                                            <li><a href="javascript:void(0);">Report 3</a></li>
+                                            <li><a href="javascript:void(0);">Report 4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+							<li class="submenu">
+                            	<a href="javascript:void(0);"><i class="fa fa-gears"></i><span>Settings</span><span class="menu-arrow"></span></a>
+                                <ul class="smenu">
+									<li><a href="manageeuser.html"><i class="fe fe-users"></i> <span>Manage User</span></a></li>
+									<li><a href="changepassword.html"><i class="fa fa-unlock-alt" aria-hidden="true"></i> <span>Change Password</span></a></li>
+								</ul>					
+							</li>
+							<li><a href="login.html"><i class="fa fa-power-off" aria-hidden="true"></i> <span style="color:#ff0;">Logout</span></a>
+						</ul>
+					</div>
+                </div>
+            </div>
+			<!-- /Sidebar -->
+		<!-- Page Wrapper -->
+		<div class="page-wrapper">
+			<div class="content container-fluid">
+				<!-- Page Header -->
+				<div class="page-header">
+					<div class="row">
+						<div class="col-sm-7 col-auto">
+							<h3 class="page-title">Material Receipts</h3>
+							<ul class="breadcrumb">
+								<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+								<li class="breadcrumb-item"><a href="#">Procurement</a></li>
+								<li class="breadcrumb-item"><a href="#">Transactions</a></li>
+								<li class="breadcrumb-item active">Material Receipts</li>
+							</ul>
+						</div>
+						<div class="col-sm-5 col">
+							
+						</div>
+					</div>
+				</div>
+				<!-- /Page Header -->
+
+				<!-- Inner Page Header 2 -->
+				<nav class="inner-navbar2 bg-success">
+					<div class="nav nav-tabs" id="nav-tab" role="tablist">
+						<a class="nav-link active" id="nav-pendingIssue-tab" data-toggle="tab" href="#nav-pendingIssue" role="tab"
+							aria-controls="nav-pendingIssue" aria-selected="true">Pending Material Issue</a>
+						<a class="nav-link" id="nav-receiptVoucher-tab" data-toggle="tab" href="#nav-receiptVoucher" role="tab"
+							aria-controls="nav-receiptVoucher" aria-selected="false">Material Receipt Voucher</a>
+					</div>
+				</nav><!-- /Inner Page Header 2 -->
+
+				<!--Inner Page Wrapper-->
+				<div class="container-fluid pl-0 pr-0">
+					<div class="tab-content" id="nav-tabContent">
+						<!--Pending Material Request-->
+						<div class="tab-pane fade show active" id="nav-pendingIssue" role="tabpanel" aria-labelledby="nav-pendingIssue-tab">
+							<table class="table table-bordered table-sm" id="printLayoutTable">
+								<thead class="thead-green">
+									<tr>
+										<th scope="col">#</th>
+										<th scope="col">
+											<input type="checkbox" id="">
+										</th>
+										<th scope="col">Material Issue Date</th>
+										<th scope="col">Material Issue No</th>
+										<th scope="col">Branch</th>
+										<th scope="col">Item Name</th>
+										<th scope="col">Item Specification</th>
+										<th scope="col">Quantity</th>
+										<th scope="col">Created Date</th>
+										<th scope="col">Balance Qty</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="text-right">1</td>
+										<td><input type="checkbox" id=""></td>
+										<td>24/04/2021</td>
+										<td>MI/BBS/21-22/0001</td>
+										<td>Bhubaneswar</td>
+										<td>Milk</td>
+										<td>Dairy</td>
+										<td>20</td>
+										<td>24/04/2021</td>
+										<td>80</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!--/Pending Material Request-->
+
+						<!--Material Issued Voucher-->
+						<div class="tab-pane fade" id="nav-receiptVoucher" role="tabpanel" aria-labelledby="nav-receiptVoucher-tab">
+							<table class="table table-bordered table-sm" id="printLayoutTable">
+								<thead class="thead-green">
+									<tr>
+										<th scope="col">#</th>
+										<th scope="col">
+											<input type="checkbox" id="">
+										</th>
+										<th scope="col">MR Date</th>
+										<th scope="col">Material Receipt No</th>
+										<th scope="col">Branch</th>
+										<th scope="col">Item Name</th>
+										<th scope="col">Item Specification</th>
+										<th scope="col">Quantity</th>
+										<th scope="col">Created Date</th>
+										<th scope="col">Created By</th>
+										<th scope="col">Balance Qty</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="text-right">1</td>
+										<td><input type="checkbox" id=""></td>
+										<td>24/04/2021</td>
+										<td>MI/BBS/21-22/0001</td>
+										<td>Bhubaneswar</td>
+										<td>Milk</td>
+										<td>Dairy</td>
+										<td>20</td>
+										<td>24/04/2021</td>
+										<td>Pranaya</td>
+										<td>80</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!--/Material Issued Voucher-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /Page Wrapper -->
+
+	</div>
+	<!-- /Main Wrapper -->
+
+	<!-- jQuery -->
+	<script src="assets/js/jquery-3.2.1.min.js"></script>
+
+	<!-- Bootstrap Core JS -->
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+
+	<!--Select2 js-->
+	<script src="assets/js/select2.min.js"></script>
+
+	<!-- Slimscroll JS -->
+	<script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+	<!-- Datatables JS -->
+	<script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+	<script src="assets/plugins/datatables/datatables.min.js"></script>
+
+	<!-- Custom JS -->
+	<script src="assets/js/script.js"></script>
+	<script>
+		$(document).ready(function () {
+			// Add minus icon for collapse element which is open by default
+			$(".collapse.show").each(function () {
+				$(this).prev(".card-header").find(".fa").addClass("fa-minus").removeClass("fa-plus");
+			});
+
+			// Toggle plus minus icon on show hide of collapse element
+			$(".collapse").on('show.bs.collapse', function () {
+				$(this).prev(".card-header").find(".fa").removeClass("fa-plus").addClass("fa-minus");
+			}).on('hide.bs.collapse', function () {
+				$(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
+			});
+			$(".collapse.show").each(function () {
+				$(this).prev(".card-header").addClass("bb").removeClass("no_bb");
+			});
+
+			// Toggle plus minus icon on show hide of collapse element
+			$(".collapse").on('show.bs.collapse', function () {
+				$(this).prev(".card-header").removeClass("no_bb").addClass("bb");
+			}).on('hide.bs.collapse', function () {
+				$(this).prev(".card-header").removeClass("bb").addClass("no_bb");
+			});
+		});
+
+		var input = document.querySelector('input[type=file]'); // see Example 4
+		input.onchange = function () {
+			var file = input.files[0];
+			drawOnCanvas(file);   // see Example 6
+			displayAsImage(file); // see Example 7
+		};
+		function drawOnCanvas(file) {
+			var reader = new FileReader();
+
+			reader.onload = function (e) {
+				var dataURL = e.target.result,
+					c = document.querySelector('canvas'), // see Example 4
+					ctx = c.getContext('2d'),
+					img = new Image();
+
+				img.onload = function () {
+					c.width = img.width;
+					c.height = img.height;
+					ctx.drawImage(img, 0, 0);
+				};
+
+				img.src = dataURL;
+			};
+
+			reader.readAsDataURL(file);
+		}
+
+		function displayAsImage(file) {
+			var imgURL = URL.createObjectURL(file),
+				img = document.createElement('img');
+
+			img.onload = function () {
+				URL.revokeObjectURL(imgURL);
+			};
+
+			img.src = imgURL;
+			document.body.appendChild(img);
+		}
+
+		$("#upfile1").click(function () {
+			$("#file1").trigger('click');
+		});
+		$("#upfile2").click(function () {
+			$("#file2").trigger('click');
+		});
+		$("#upfile3").click(function () {
+			$("#file3").trigger('click');
+		});
+	</script>
+
+	<script>
+		$('table tr').on('click', 'td', function () {
+			window.location.href = "procurment_transactions_add_edit_material_receipts.html";
+		})
+	</script>
+</body>
+
+</html>

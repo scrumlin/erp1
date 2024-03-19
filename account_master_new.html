@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	<title>Maxim ERP</title>
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+	<!-- Fontawesome CSS -->
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+	<!-- Feathericon CSS -->
+	<link rel="stylesheet" href="assets/css/feathericon.min.css">
+
+	<!-- Datatables CSS -->
+	<link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
+
+	<!-- Select2 CSS -->
+	<link rel="stylesheet" href="assets/css/select2.min.css">
+
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="assets/css/style.css">
+
+	<!-- Custom Common CSS -->
+	<link rel="stylesheet" href="assets/css/custom_common.css">
+
+	<!--[if lt IE 9]>
+			<script src="assets/js/html5shiv.min.js"></script>
+			<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+
+</head>
+
+<body>
+
+	<!-- Main Wrapper -->
+        <div class="main-wrapper">		
+			<!-- Header -->
+            <div class="header">			
+				<!-- Logo -->
+                <div class="header-left">
+                    <a href="index.html" class="logo">
+						<img src="assets/img/maxim_logo.png" alt="Logo">
+					</a>
+					<a href="index.html" class="logo logo-small">
+						<img src="assets/img/logo-small.png" alt="Logo" width="30" height="30">
+					</a>
+                </div>
+				<!-- /Logo -->
+				
+				<a href="javascript:void(0);" id="toggle_btn">
+					<i class="fe fe-text-align-left"></i>
+				</a>
+				
+				<!-- Mobile Menu Toggle -->
+				<a class="mobile_btn" id="mobile_btn">
+					<i class="fa fa-bars"></i>
+				</a>
+				<!-- /Mobile Menu Toggle -->				
+            </div>
+			<!-- /Header -->			
+			<!-- Sidebar -->
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-inner slimscroll">
+					<div id="sidebar-menu" class="sidebar-menu">
+						<ul>
+							<li> 
+								<a href="index.html"><i class="fe fe-home"></i> <span style="color:#ff0;">Dashboard</span></a>
+							</li>
+                            <li>
+                            	<a href="javascript:void(0);"><i class="fa fa-gear"></i><span>Masters</span></a>
+                            </li>
+                            <li class="submenu">
+                            	<a href="javascript:void(0);"><i class="fa fa-cubes"></i><span>Procurement</span><span class="menu-arrow"></span></a>
+                                <ul class="smenu">
+                                	<li class="submenu"><a href="javascript:void(0);"><span>Masters</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="procurment_master_item_master.html">Item Master</a></li>
+                                            <li><a href="procurment_master_item_category_master.html">Item Category Master</a></li>
+                                            <li><a href="procurment_master_tax_code_master.html">Tax Code Master</a></li>
+											<li><a href="procurment_master_unit_master.html">Unit Master</a></li>
+                                            <li><a href="procurment_master_ware_house_master.html">Ware House Master</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Transactions</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            
+											<li><a href="procurment_transactions_material_request.html">Material Request</a></li>
+                                            <li><a href="procurment_transactions_material_issue.html">Material Issue</a></li>
+                                            <li><a href="procurment_transactions_material_receipts.html">Material Receipts</a></li>
+											<li><a href="procurment_transactions_material_consumption.html">Material Consumption</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Reports</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Report 1</a></li>
+                                            <li><a href="javascript:void(0);">Report 2</a></li>
+                                            <li><a href="javascript:void(0);">Report 3</a></li>
+                                            <li><a href="javascript:void(0);">Report 4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="submenu">
+                            	<a href="javascript:void(0);"><i class="fa fa-bank"></i><span>Accounts</span><span class="menu-arrow"></span></a>
+                                <ul class="smenu">
+                                	<li><a href="account_master.html" class="active"><span>Masters</span> </a></li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Transactions</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Transactions 1</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 2</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 3</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Reports</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Report 1</a></li>
+                                            <li><a href="javascript:void(0);">Report 2</a></li>
+                                            <li><a href="javascript:void(0);">Report 3</a></li>
+                                            <li><a href="javascript:void(0);">Report 4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="submenu">
+                            	<a href="javascript:void(0);"><i class="fa fa-group"></i><span>HR & Payroll</span><span class="menu-arrow"></span></a>
+                                <ul class="smenu">
+                                	<li><a href="payroll_master.html"><span>Masters</span></a> </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Transactions</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="employee_detail.html"><span>Employee Detail</span></a></li>
+                                            <li><a href="attendance.html"><span>Attendance</span></a></li>
+                                            <li><a href="employee_earnings_deductions.html"><span>Earnings & Deductions</span></a></li>
+                                            <li><a href="monthly_deductions.html"><span>Monthly Deductions</span></a></li>
+                                            <li><a href="monthly_earnings.html"><span>Monthly Earnings</span></a></li>
+                                            <li><a href="payroll_processing.html"><span>Payroll Processing</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Reports</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Report 1</a></li>
+                                            <li><a href="javascript:void(0);">Report 2</a></li>
+                                            <li><a href="javascript:void(0);">Report 3</a></li>
+                                            <li><a href="javascript:void(0);">Report 4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+							<li class="submenu">
+                            	<a href="javascript:void(0);"><i class="fa fa-gears"></i><span>Maintenance</span><span class="menu-arrow"></span></a>
+                                <ul class="smenu">
+                                	<li class="submenu"><a href="javascript:void(0);"><span>Masters</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Masters 1</a></li>
+                                            <li><a href="javascript:void(0);">Masters 2</a></li>
+                                            <li><a href="javascript:void(0);">Masters 3</a></li>
+                                            <li><a href="javascript:void(0);">Masters 4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Transactions</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Transactions 1</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 2</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 3</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Reports</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Report 1</a></li>
+                                            <li><a href="javascript:void(0);">Report 2</a></li>
+                                            <li><a href="javascript:void(0);">Report 3</a></li>
+                                            <li><a href="javascript:void(0);">Report 4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+							<li class="submenu">
+                            	<a href="javascript:void(0);"><i class="fa fa-gears"></i><span>Settings</span><span class="menu-arrow"></span></a>
+                                <ul class="smenu">
+									<li><a href="manageeuser.html"><i class="fe fe-users"></i> <span>Manage User</span></a></li>
+									<li><a href="changepassword.html"><i class="fa fa-unlock-alt" aria-hidden="true"></i> <span>Change Password</span></a></li>
+								</ul>					
+							</li>
+							<li><a href="login.html"><i class="fa fa-power-off" aria-hidden="true"></i> <span style="color:#ff0;">Logout</span></a>
+						</ul>
+					</div>
+                </div>
+            </div>
+			<!-- /Sidebar -->
+		<!-- Page Wrapper -->
+		<div class="page-wrapper">
+			<div class="content container-fluid">
+				<!-- Page Header -->
+				<div class="page-header">
+					<div class="row">
+						<div class="col-sm-6 col-auto">
+							<h3 class="page-title">Account</h3>
+							<ul class="breadcrumb">
+								<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+								<li class="breadcrumb-item"><a href="payroll_dashboard.html">Master</a></li>
+								<li class="breadcrumb-item active">Account</li>
+							</ul>
+						</div>
+						<div class="col-sm-6 col pt-3 right-nav-menues">
+							<ul>
+								<li class="pull-right">
+									<a href="#">
+										<span id="btnClose"> <i class="fa fa-times-circle-o fa-1x"></i><br> Close </span>
+									</a>
+								</li>
+								<li class="pull-right">
+									<a href="#">
+										<span id="btnDelete"><i class="fa fa-trash fa-1x"></i><br> Delete</span>
+									</a>
+								</li>
+								<!-- <li class="pull-right">
+									<span> <i class="fa fa-ban fa-1x"></i><br>Stop</span>
+								</li> -->
+								<!-- <li class="pull-right">
+									<span id="btnReject"> <i class="fa fa-ban fa-1x"></i><br> Reject</span>
+								</li> -->
+								<!-- <li class="pull-right">
+									<span id="btnAuthorize"><i class="fa fa-ban fa-1x authorize"></i><br>
+										Authorize</span>
+								</li> -->
+								<li class="pull-right">
+									<a href="account_master_properties.html">
+										<span id="btnProperties"><i class="fa fa-cogs fa-1x"></i><br>Properties</span>
+									</a>
+								</li>
+								<li class="pull-right">
+									<a href="#">
+										<span id="btnClone"><i class="fa fa-clone fa-1x"></i><br> Clone</span>
+									</a>
+								</li>
+								<li class="pull-right">
+									<a href="account_master_new.html">
+										<span id="btnMasterEdit"><i class="fa fa-pencil-square-o fa-1x"></i><br> Edit</span>
+									</a>
+								</li>
+								<li class="pull-right">
+									<a href="account_master_group.html">
+										<span id="btnAddGroup"><i class="fa fa-users fa-1x"></i><br> Add Group</span>
+									</a>
+								</li>
+								<li class="pull-right">
+									<a href="account_master_new.html">
+										<span id="btnNew"><i class="fa fa-file-text fa-1x"></i><br>New</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- /Page Header -->
+
+				<!-- Inner Page Header 1 -->
+				<nav class="navbar inner-navbar1 pt-1 pb-1">
+					<h5 class="float-left mt-3">New Account</h5>
+
+					<ul>
+						<li>
+							<span id="btnAction"><i class="fa fa-check-square-o fa-1x"></i><br> Action</span>
+						</li>
+						<li>
+							<span id="btnClose"><i class="fa fa-times-circle-o fa-1x"></i><br> Close</span>
+						</li>
+						<li>
+							<span id="btnClone"><i class="fa fa-clone fa-1x"></i><br> Clone</span>
+						</li>
+						<li>
+							<span id="btnSave"><i class="fa fa-floppy-o fa-1x"></i><br>Save</span>
+						</li>
+					</ul>
+				</nav> <!-- /Page Header -->
+
+				<!-- Inner Page Header 2 -->
+				<nav class="inner-navbar2 bg-success">
+					<div class="nav nav-tabs" id="nav-tab" role="tablist">
+						<a class="nav-link active" id="nav-general-tab" data-toggle="tab" href="#nav-general" role="tab"
+							aria-controls="nav-general" aria-selected="true">General</a>
+						<a class="nav-link" id="nav-setting-tab" data-toggle="tab" href="#nav-setting" role="tab"
+							aria-controls="nav-setting" aria-selected="false">Setting</a>
+						<a class="nav-link" id="nav-details-tab" data-toggle="tab" href="#nav-details" role="tab"
+							aria-controls="nav-details" aria-selected="false">Details</a>
+						<a class="nav-link" id="nav-printLayout-tab" data-toggle="tab" href="#nav-printLayout"
+							role="tab" aria-controls="nav-printLayout" aria-selected="false">Print Layout</a>
+						<a class="nav-link" id="nav-gst-tab" data-toggle="tab" href="#nav-gst" role="tab"
+							aria-controls="nav-gst" aria-selected="false">GST</a>
+					</div>
+				</nav><!-- /Inner Page Header 2 -->
+
+				<!--Inner Page Wrapper-->
+				<div class="container-fluid pl-0 pr-0">
+					<div class="tab-content" id="nav-tabContent">
+						<!--General Tab-->
+						<div class="tab-pane fade show active" id="nav-general" role="tabpanel"
+							aria-labelledby="nav-general-tab">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Name </label>
+										<div class="col-md-8">
+											<input type="text" class="form-control" placeholder="Enter Name">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Code </label>
+										<div class="col-md-8">
+											<input type="text" class="form-control" placeholder="Enter Code">
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Account Type</label>
+										<div class="col-md-8">
+											<select class="select">
+												<option>Cash </option>
+												<option>Bank</option>
+												<option>Sales</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Credit Limit </label>
+										<div class="col-md-8">
+											<input type="text" class="form-control" placeholder="">
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Credit Days </label>
+										<div class="col-md-8">
+											<input type="text" class="form-control" placeholder="">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Cheque Discount Limit </label>
+										<div class="col-md-8">
+											<input type="text" class="form-control" placeholder="">
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Rate of interest </label>
+										<div class="col-md-8">
+											<input type="text" class="form-control" placeholder="">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">PDC Discounted A/c</label>
+										<div class="col-md-8">
+											<select class="select">
+												<option>Designation </option>
+												<option>Designation 1</option>
+												<option>Designation 2</option>
+											</select>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Bank A/c </label>
+										<div class="col-md-8">
+											<select class="select">
+												<option>Category </option>
+												<option>Category 1</option>
+												<option>Category 2</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">TR Limits </label>
+										<div class="col-md-8">
+											<input type="text" class="form-control" placeholder="">
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Acceptance a/c </label>
+										<div class="col-md-8">
+											<select class="select">
+												<option>Department </option>
+												<option>Department 1</option>
+												<option>Department 2</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Dairy Unit </label>
+										<div class="col-md-8">
+											<select class="select">
+												<option>Location </option>
+												<option>Location 1</option>
+												<option>Location 2</option>
+											</select>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Zone </label>
+										<div class="col-md-8">
+											<select class="select">
+												<option>Status </option>
+												<option>Status 1</option>
+												<option>Status 2</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Customer Type </label>
+										<div class="col-md-8">
+											<select class="select">
+												<option>Status </option>
+												<option>Status 1</option>
+												<option>Status 2</option>
+											</select>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Morning Route </label>
+										<div class="col-md-8">
+											<select class="select">
+												<option>Status </option>
+												<option>Status 1</option>
+												<option>Status 2</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Evening Route </label>
+										<div class="col-md-8">
+											<select class="select">
+												<option>Status </option>
+												<option>Status 1</option>
+												<option>Status 2</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Location </label>
+										<div class="col-md-8">
+											<input type="text" class="form-control" placeholder="">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/General Tab-->
+
+						<!--Setting Tab-->
+						<div class="tab-pane fade" id="nav-setting" role="tabpanel" aria-labelledby="nav-profile-tab">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Debit / Credit proposal</label>
+										<div class="col-md-8">
+											<select class="select">
+												<option>None </option>
+												<option>Debit</option>
+												<option>Credit</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Debit / credit Required</label>
+										<div class="col-md-8">
+											<select class="select">
+												<option>None </option>
+												<option>Debit</option>
+												<option>Credit</option>
+											</select>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Exchange Adjustment Gain A/C </label>
+										<div class="col-md-8">
+											<select class="select">
+												<option>Cash </option>
+												<option>Bank</option>
+												<option>Sales</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Exchange Adjustment Loss A/C </label>
+										<div class="col-md-8">
+											<select class="select">
+												<option>Cash </option>
+												<option>Bank</option>
+												<option>Sales</option>
+											</select>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Primary Account</label>
+										<div class="col-md-8">
+											<select class="select">
+												<option>Cash </option>
+												<option>Bank</option>
+												<option>Sales</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Default currency</label>
+										<div class="col-md-8">
+											<select class="select">
+												<option>AED </option>
+												<option>AFN</option>
+												<option>All</option>
+											</select>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Consolidation method</label>
+										<div class="col-md-8">
+											<select class="select">
+												<option>Average Rate </option>
+												<option>Closing</option>
+												<option>Historical</option>
+												<option>Composite</option>
+												<option>Equity</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Payment terms</label>
+										<div class="col-md-8">
+											<select class="select">
+												<option>sPayment Description </option>
+											</select>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Reminder terms</label>
+										<div class="col-md-8">
+											<select class="select">
+												<option>sPayment Description </option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Finance charge terms</label>
+										<div class="col-md-8">
+											<select class="select">
+												<option>sPayment Description </option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/Setting Tab-->
+
+						<!--Details Tab-->
+						<div class="tab-pane fade" id="nav-details" role="tabpanel" aria-labelledby="nav-contact-tab">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Address </label>
+										<div class="col-md-8">
+											<textarea class="form-control" id="address" rows="3"></textarea>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">City</label>
+										<div class="col-md-8">
+											<select class="select1">
+												<option>Bhubaneswar </option>
+												<option>Cuttack</option>
+												<option>Puri</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Delivery Address </label>
+										<div class="col-md-8">
+											<textarea class="form-control" id="deliveryAddress" rows="3"></textarea>
+										</div>
+									</div>
+									<div class="form-check float-right">
+										<input class="form-check-input" type="checkbox" value=""
+											id="sendEmailToCustomer">
+										<label class="form-check-label" for="sendEmailToCustomer">Send Email to
+											customer</label>
+									</div>
+									<br>
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Email </label>
+										<div class="col-md-8">
+											<input type="email" class="form-control" placeholder="">
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Tel No </label>
+										<div class="col-md-8">
+											<input type="tel" class="form-control" placeholder="">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Fax No </label>
+										<div class="col-md-8">
+											<input type="text" class="form-control" placeholder="">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Pin </label>
+										<div class="col-md-8">
+											<input type="number" class="form-control" placeholder="">
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">City</label>
+										<div class="col-md-8">
+											<select class="select1">
+												<option>Bhubaneswar </option>
+												<option>Cuttack</option>
+												<option>Puri</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Pin </label>
+										<div class="col-md-8">
+											<input type="number" class="form-control" placeholder="">
+										</div>
+									</div>
+									<div class="form-check float-right">
+										<input class="form-check-input" type="checkbox" value=""
+											id="allowCustomerPortal">
+										<label class="form-check-label" for="allowCustomerPortal">Allow Customer
+											Portal</label>
+									</div>
+									<br>
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Password </label>
+										<div class="col-md-8">
+											<input type="password" class="form-control" placeholder="">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--/Details Tab-->
+
+						<!--Print Layout Tab-->
+						<div class="tab-pane fade" id="nav-printLayout" role="tabpanel"
+							aria-labelledby="nav-contact-tab">
+							<table class="table table-bordered table-sm" id="printLayoutTable">
+								<thead class="thead-green">
+									<tr>
+										<th scope="col">#</th>
+										<th scope="col">Voucher Type</th>
+										<th scope="col" colspan="2">Print Layout</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th class="text-center">1</th>
+										<td>
+											<select class="select w-100" id='voucherType' name='voucherType[]'>
+												<option> </option>
+												<option>Bank Payments</option>
+											</select>
+										</td>
+										<td>
+											<select class="select w-100" id='printLayout' name='printLayout[]'>
+												<option> </option>
+												<option>Bank Payments</option>
+											</select>
+										</td>
+										<td class="text-center"><a href="javascript:void(0);" class="add"><i class="fa fa-plus fa-1x"></i></a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!--/Print Layout Tab-->
+
+						<!--GST Tab-->
+						<div class="tab-pane fade" id="nav-gst" role="tabpanel" aria-labelledby="nav-contact-tab">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">GSTIN </label>
+										<div class="col-md-8">
+											<input type="text" class="form-control" placeholder="">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">State Name</label>
+										<div class="col-md-8">
+											<select class="select1">
+												<option>Odisha </option>
+												<option>Bihar</option>
+												<option>Andra Pradesh</option>
+											</select>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Business Types </label>
+										<div class="col-md-8">
+											<select class="select">
+												<option>B2B </option>
+												<option>B2C</option>
+												<option>EXP</option>
+												<option>IMP</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Type of Tax payers</label>
+										<div class="col-md-8">
+											<select class="select">
+												<option>Normal</option>
+												<option>Compund Trader</option>
+												<option>Casual</option>
+											</select>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label">Country </label>
+										<div class="col-md-8">
+											<select class="select1">
+												<option>India </option>
+												<option>South Korea</option>
+												<option>Japan</option>
+											</select>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<!--/GST Tab-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /Page Wrapper -->
+
+	</div>
+	<!-- /Main Wrapper -->
+
+	<!-- jQuery -->
+	<script src="assets/js/jquery-3.2.1.min.js"></script>
+
+	<!-- Bootstrap Core JS -->
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+
+	<!--Select2 js-->
+	<script src="assets/js/select2.min.js"></script>
+
+	<!-- Slimscroll JS -->
+	<script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+	<!-- Datatables JS -->
+	<script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+	<script src="assets/plugins/datatables/datatables.min.js"></script>
+
+	<!-- Custom JS -->
+	<script src="assets/js/script.js"></script>
+	<script>
+		$(document).ready(function () {
+			// Add minus icon for collapse element which is open by default
+			$(".collapse.show").each(function () {
+				$(this).prev(".card-header").find(".fa").addClass("fa-minus").removeClass("fa-plus");
+			});
+
+			// Toggle plus minus icon on show hide of collapse element
+			$(".collapse").on('show.bs.collapse', function () {
+				$(this).prev(".card-header").find(".fa").removeClass("fa-plus").addClass("fa-minus");
+			}).on('hide.bs.collapse', function () {
+				$(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
+			});
+			$(".collapse.show").each(function () {
+				$(this).prev(".card-header").addClass("bb").removeClass("no_bb");
+			});
+
+			// Toggle plus minus icon on show hide of collapse element
+			$(".collapse").on('show.bs.collapse', function () {
+				$(this).prev(".card-header").removeClass("no_bb").addClass("bb");
+			}).on('hide.bs.collapse', function () {
+				$(this).prev(".card-header").removeClass("bb").addClass("no_bb");
+			});
+		});
+
+		var input = document.querySelector('input[type=file]'); // see Example 4
+		input.onchange = function () {
+			var file = input.files[0];
+			drawOnCanvas(file);   // see Example 6
+			displayAsImage(file); // see Example 7
+		};
+		function drawOnCanvas(file) {
+			var reader = new FileReader();
+
+			reader.onload = function (e) {
+				var dataURL = e.target.result,
+					c = document.querySelector('canvas'), // see Example 4
+					ctx = c.getContext('2d'),
+					img = new Image();
+
+				img.onload = function () {
+					c.width = img.width;
+					c.height = img.height;
+					ctx.drawImage(img, 0, 0);
+				};
+
+				img.src = dataURL;
+			};
+
+			reader.readAsDataURL(file);
+		}
+
+		function displayAsImage(file) {
+			var imgURL = URL.createObjectURL(file),
+				img = document.createElement('img');
+
+			img.onload = function () {
+				URL.revokeObjectURL(imgURL);
+			};
+
+			img.src = imgURL;
+			document.body.appendChild(img);
+		}
+
+		$("#upfile1").click(function () {
+			$("#file1").trigger('click');
+		});
+		$("#upfile2").click(function () {
+			$("#file2").trigger('click');
+		});
+		$("#upfile3").click(function () {
+			$("#file3").trigger('click');
+		});
+	</script>
+
+	<script>
+		var i=$('table tr').length;
+
+		$(".add").on('click',function(){
+			html = '<tr>'; 
+			html += '<td class="text-center">'+i+'</td>';
+			html += '<td><select class="select w-100" id="voucherType" name="voucherType[]"><option></option><option>Bank Payments</option></select></td>';
+			html += '<td><select class="select w-100" id="printLayout" name="printLayout[]"><option></option><option>Bank Payments</option></select></td>';
+			html += '<td class="text-center"><a href="javascript:void(0);" class="remove"><i class="fa fa-trash fa-1x"></i></a></td>';	 
+			html += '</tr>';
+			$('table').append(html);
+			i++;
+
+			$(".remove").on('click', function () {
+					$(this).closest('tr').remove();
+			});
+		});
+	</script>
+</body>
+
+</html>

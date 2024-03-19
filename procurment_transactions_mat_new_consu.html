@@ -1,0 +1,478 @@
+0.<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	<title>Maxim ERP</title>
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+	<!-- Fontawesome CSS -->
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+	<!-- Feathericon CSS -->
+	<link rel="stylesheet" href="assets/css/feathericon.min.css">
+
+	<!-- Datatables CSS -->
+	<link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
+
+	<!-- Select2 CSS -->
+	<link rel="stylesheet" href="assets/css/select2.min.css">
+
+	<!-- Custom Common CSS -->
+	<link rel="stylesheet" href="assets/css/custom_common.css">
+
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="assets/css/style.css">
+
+
+	<!--[if lt IE 9]>
+			<script src="assets/js/html5shiv.min.js"></script>
+			<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+
+</head>
+
+<body>
+
+	<!-- Main Wrapper -->
+        <div class="main-wrapper">		
+			<!-- Header -->
+            <div class="header">			
+				<!-- Logo -->
+                <div class="header-left">
+                    <a href="index.html" class="logo">
+						<img src="assets/img/maxim_logo.png" alt="Logo">
+					</a>
+					<a href="index.html" class="logo logo-small">
+						<img src="assets/img/logo-small.png" alt="Logo" width="30" height="30">
+					</a>
+                </div>
+				<!-- /Logo -->
+				
+				<a href="javascript:void(0);" id="toggle_btn">
+					<i class="fe fe-text-align-left"></i>
+				</a>
+				
+				<!-- Mobile Menu Toggle -->
+				<a class="mobile_btn" id="mobile_btn">
+					<i class="fa fa-bars"></i>
+				</a>
+				<!-- /Mobile Menu Toggle -->				
+            </div>
+			<!-- /Header -->			
+			<!-- Sidebar -->
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-inner slimscroll">
+					<div id="sidebar-menu" class="sidebar-menu">
+						<ul>
+							<li> 
+								<a href="index.html"><i class="fe fe-home"></i> <span style="color:#ff0;">Dashboard</span></a>
+							</li>
+                            <li>
+                            	<a href="javascript:void(0);"><i class="fa fa-gear"></i><span>Masters</span></a>
+                            </li>
+                            <li class="submenu">
+                            	<a href="javascript:void(0);"><i class="fa fa-cubes"></i><span>Procurement</span><span class="menu-arrow"></span></a>
+                                <ul class="smenu">
+                                	<li class="submenu"><a href="javascript:void(0);"><span>Masters</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="procurment_master_item_master.html">Item Master</a></li>
+                                            <li><a href="procurment_master_item_category_master.html">Item Category Master</a></li>
+                                            <li><a href="procurment_master_tax_code_master.html">Tax Code Master</a></li>
+											<li><a href="procurment_master_unit_master.html">Unit Master</a></li>
+                                            <li><a href="procurment_master_ware_house_master.html">Ware House Master</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Transactions</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            
+											<li><a href="procurment_transactions_material_request.html">Material Request</a></li>
+                                            <li><a href="procurment_transactions_material_issue.html">Material Issue</a></li>
+                                            <li><a href="procurment_transactions_material_receipts.html">Material Receipts</a></li>
+											<li><a href="procurment_transactions_material_consumption.html" class="active">Material Consumption</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Reports</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Report 1</a></li>
+                                            <li><a href="javascript:void(0);">Report 2</a></li>
+                                            <li><a href="javascript:void(0);">Report 3</a></li>
+                                            <li><a href="javascript:void(0);">Report 4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="submenu">
+                            	<a href="javascript:void(0);"><i class="fa fa-bank"></i><span>Accounts</span><span class="menu-arrow"></span></a>
+                                <ul class="smenu">
+                                	<li><a href="account_master.html"><span>Masters</span> </a></li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Transactions</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Transactions 1</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 2</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 3</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Reports</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Report 1</a></li>
+                                            <li><a href="javascript:void(0);">Report 2</a></li>
+                                            <li><a href="javascript:void(0);">Report 3</a></li>
+                                            <li><a href="javascript:void(0);">Report 4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="submenu">
+                            	<a href="javascript:void(0);"><i class="fa fa-group"></i><span>HR & Payroll</span><span class="menu-arrow"></span></a>
+                                <ul class="smenu">
+                                	<li><a href="payroll_master.html"><span>Masters</span></a> </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Transactions</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="employee_detail.html"><span>Employee Detail</span></a></li>
+                                            <li><a href="attendance.html"><span>Attendance</span></a></li>
+                                            <li><a href="employee_earnings_deductions.html"><span>Earnings & Deductions</span></a></li>
+                                            <li><a href="monthly_deductions.html"><span>Monthly Deductions</span></a></li>
+                                            <li><a href="monthly_earnings.html"><span>Monthly Earnings</span></a></li>
+                                            <li><a href="payroll_processing.html"><span>Payroll Processing</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Reports</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Report 1</a></li>
+                                            <li><a href="javascript:void(0);">Report 2</a></li>
+                                            <li><a href="javascript:void(0);">Report 3</a></li>
+                                            <li><a href="javascript:void(0);">Report 4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+							<li class="submenu">
+                            	<a href="javascript:void(0);"><i class="fa fa-gears"></i><span>Maintenance</span><span class="menu-arrow"></span></a>
+                                <ul class="smenu">
+                                	<li class="submenu"><a href="javascript:void(0);"><span>Masters</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Masters 1</a></li>
+                                            <li><a href="javascript:void(0);">Masters 2</a></li>
+                                            <li><a href="javascript:void(0);">Masters 3</a></li>
+                                            <li><a href="javascript:void(0);">Masters 4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Transactions</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Transactions 1</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 2</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 3</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Reports</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Report 1</a></li>
+                                            <li><a href="javascript:void(0);">Report 2</a></li>
+                                            <li><a href="javascript:void(0);">Report 3</a></li>
+                                            <li><a href="javascript:void(0);">Report 4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+							<li class="submenu">
+                            	<a href="javascript:void(0);"><i class="fa fa-gears"></i><span>Settings</span><span class="menu-arrow"></span></a>
+                                <ul class="smenu">
+									<li><a href="manageeuser.html"><i class="fe fe-users"></i> <span>Manage User</span></a></li>
+									<li><a href="changepassword.html"><i class="fa fa-unlock-alt" aria-hidden="true"></i> <span>Change Password</span></a></li>
+								</ul>					
+							</li>
+							<li><a href="login.html"><i class="fa fa-power-off" aria-hidden="true"></i> <span style="color:#ff0;">Logout</span></a>
+						</ul>
+					</div>
+                </div>
+            </div>
+			<!-- /Sidebar -->
+		<!-- Page Wrapper -->
+		<div class="page-wrapper">
+			<div class="content container-fluid">
+				<!-- Page Header -->
+				<div class="page-header">
+					<div class="row">
+						<div class="col-sm-7 col-auto">
+							<h3 class="page-title">Material Consumption</h3>
+							<ul class="breadcrumb">
+								<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+								<li class="breadcrumb-item"><a href="#">Procurement</a></li>
+								<li class="breadcrumb-item"><a href="#">Transactions</a></li>
+								<li class="breadcrumb-item active">New Voucher</li>
+							</ul>
+						</div>
+						<div class="col-sm-5 col">
+						
+						</div>
+					</div>
+				</div>
+				<!-- /Page Header -->
+
+				<!--Inner Page Wrapper-->
+				<div class="container-fluid pl-0 pr-0 mt-0 mb-2">
+					<div class="accordion mb-1" id="materialRequest">
+						<div class="card">
+						  <div class="card-header" id="headingOne">
+							<h2 class="mb-0">
+							  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#material_request" aria-expanded="true" aria-controls="material_request">
+								<i class="fa fa-minus-circle fa-1x float-right"></i>
+							  </button>
+							</h2>
+						  </div>
+					  
+						  <div id="material_request" class="collapse show" aria-labelledby="headingOne" data-parent="#materialRequest">
+							<div class="card-body">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group row">
+											<label class="col-md-4 col-form-label">Material Consumption No</label>
+											<div class="col-md-8">
+												<select class="select">
+													<option>OB/MCN/20-21/0001</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group row">
+											<label class="col-md-4 col-form-label">Branch</label>
+											<div class="col-md-8">
+												<select class="select1">
+													<option>Angul </option>
+													<option>Balangir</option>
+													<option>Cuttack</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group row">
+											<label class="col-md-4 col-form-label">Narration</label>
+											<div class="col-md-8">
+												<textarea class="form-control" placeholder="" rows="1"></textarea>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group row">
+											<label class="col-md-4 col-form-label custom-text-14">Material Consumption Date</label>
+											<div class="col-md-8">
+												<input type="date" class="form-control" placeholder="">
+											</div>
+										</div>
+										<div class="form-group row">
+											<label class="col-md-4 col-form-label">Department</label>
+											<div class="col-md-8">
+												<select class="select">
+													<option>..... </option>
+													<option>..</option>
+													<option>..</option>
+												</select>
+											</div>
+										</div>	
+									</div>
+								</div>
+							</div>
+						  </div>
+						</div>
+					</div>
+
+					<div class="accordion" id="materialTable">
+						<div class="card">
+						  <div class="card-header" id="headingTwo">
+							<h2 class="mb-0">
+							  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#material_table" aria-expanded="true" aria-controls="material_table">
+								
+								<i class="fa fa-minus-circle fa-1x float-right"></i>
+							  </button>
+							</h2>
+						  </div>
+					  
+						  <div id="material_table" class="collapse show" aria-labelledby="headingTwo" data-parent="#materialTable">
+							<div class="card-body">
+								<table class="table table-bordered table-sm" id="materialRequestTable">
+									<thead class="thead-green">
+										<tr>
+											<th scope="col">SL. NO.</th>
+											<th scope="col">Warehouse</th>
+											<th scope="col">Item Name</th>
+											<th scope="col">Item Specification</th>
+											<th scope="col">Unit</th>
+											<th scope="col">Quantity</th>
+											<th scope="col">Sub Section</th>
+											<th scope="col">Purpose of Utilization</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="text-center" id="slNo">1</td>
+											<td>
+												<input type="text" class="form-control form-control-sm" id="wareHouse" name="wareHouse[]">
+											</td>
+											<td>
+												<select class="select w-100" id="itemName" name="itemName[]">
+													<option>...</option>
+													<option>ABT-5(New)</option>
+												</select>
+											</td>
+											<td>
+												<select class="select w-100" id="itemSpecification" name="itemSpecification[]">
+													<option>...</option>
+													<option>Dairy</option>
+												</select>
+											</td>
+											<td>
+												<input type="text" class="form-control form-control-sm" id="unit" name="unit[]">
+											</td>
+											<td>
+												<input type="text" class="form-control form-control-sm" id="quantity" name="quantity[]">
+											</td>
+											<td>
+												<input type="text" class="form-control form-control-sm" id="subSection" name="subSection[]">
+											</td>
+											<td>
+												<input type="text" class="form-control form-control-sm" id="purposeOfUtilization" name="purposeOfUtilization[]">
+											</td>
+											<td class="text-center"><a href="javascript:void(0);" class="add"><i class="fa fa-plus fa-1x"></i></a></td>
+										</tr>
+									</tbody>
+								</table>	
+							</div>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /Page Wrapper -->
+
+	</div>
+	<!-- /Main Wrapper -->
+
+	<!-- jQuery -->
+	<script src="assets/js/jquery-3.2.1.min.js"></script>
+
+	<!-- Bootstrap Core JS -->
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+
+	<!--Select2 js-->
+	<script src="assets/js/select2.min.js"></script>
+
+	<!-- Slimscroll JS -->
+	<script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+	<!-- Datatables JS -->
+	<script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+	<script src="assets/plugins/datatables/datatables.min.js"></script>
+
+	<!-- Custom JS -->
+	<script src="assets/js/script.js"></script>
+	<script>
+		$(document).ready(function () {
+			// Add minus icon for collapse element which is open by default
+			$(".collapse.show").each(function () {
+				$(this).prev(".card-header").find(".fa").addClass("fa-minus").removeClass("fa-plus");
+			});
+
+			// Toggle plus minus icon on show hide of collapse element
+			$(".collapse").on('show.bs.collapse', function () {
+				$(this).prev(".card-header").find(".fa").removeClass("fa-plus").addClass("fa-minus");
+			}).on('hide.bs.collapse', function () {
+				$(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
+			});
+			$(".collapse.show").each(function () {
+				$(this).prev(".card-header").addClass("bb").removeClass("no_bb");
+			});
+
+			// Toggle plus minus icon on show hide of collapse element
+			$(".collapse").on('show.bs.collapse', function () {
+				$(this).prev(".card-header").removeClass("no_bb").addClass("bb");
+			}).on('hide.bs.collapse', function () {
+				$(this).prev(".card-header").removeClass("bb").addClass("no_bb");
+			});
+		});
+
+		var input = document.querySelector('input[type=file]'); // see Example 4
+		input.onchange = function () {
+			var file = input.files[0];
+			drawOnCanvas(file);   // see Example 6
+			displayAsImage(file); // see Example 7
+		};
+		function drawOnCanvas(file) {
+			var reader = new FileReader();
+
+			reader.onload = function (e) {
+				var dataURL = e.target.result,
+					c = document.querySelector('canvas'), // see Example 4
+					ctx = c.getContext('2d'),
+					img = new Image();
+
+				img.onload = function () {
+					c.width = img.width;
+					c.height = img.height;
+					ctx.drawImage(img, 0, 0);
+				};
+
+				img.src = dataURL;
+			};
+
+			reader.readAsDataURL(file);
+		}
+
+		function displayAsImage(file) {
+			var imgURL = URL.createObjectURL(file),
+				img = document.createElement('img');
+
+			img.onload = function () {
+				URL.revokeObjectURL(imgURL);
+			};
+
+			img.src = imgURL;
+			document.body.appendChild(img);
+		}
+
+		$("#upfile1").click(function () {
+			$("#file1").trigger('click');
+		});
+		$("#upfile2").click(function () {
+			$("#file2").trigger('click');
+		});
+		$("#upfile3").click(function () {
+			$("#file3").trigger('click');
+		});
+	</script>
+
+	<script>
+		var i=$('table tr').length;
+
+		$(".add").on('click',function(){
+			html = '<tr>'; 
+			html += '<td class="text-center" id="slNo">'+i+'</td>';
+			html += '<td><input type="text" class="form-control form-control-sm" id="wareHouse" name="wareHouse[]"></td>';
+			html += '<td><select class="select w-100" id="itemName" name="itemName[]"><option>...</option><option>ABT-5(New)</option></select></td>';
+			html += '<td><select class="select w-100" id="itemSpecification" name="itemSpecification[]"><option>...</option><option>Dairy</option></select></td>';
+			html += '<td><input type="text" class="form-control form-control-sm" id="unit" name="unit[]"></td>';
+			html += '<td><input type="text" class="form-control form-control-sm" id="quantity" name="quantity[]"></td>';
+			html += '<td><input type="text" class="form-control form-control-sm" id="subSection" name="subSection[]"></td>';
+			html += '<td><input type="text" class="form-control form-control-sm" id="purposeOfUtilization" name="purposeOfUtilization[]"></td>';
+			html += '<td class="text-center"><a href="javascript:void(0);" class="remove"><i class="fa fa-trash fa-1x"></i></a></td>';	 
+			html += '</tr>';
+			$('table').append(html);
+			i++;
+
+			$(".remove").on('click', function () {
+					$(this).closest('tr').remove();
+			});
+		});
+	</script>
+
+</body>
+
+</html>

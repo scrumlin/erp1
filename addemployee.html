@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+        <meta charset="utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+        <title>Maxim ERP</title>		
+
+		<!-- Favicon -->
+
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">		
+
+		<!-- Bootstrap CSS -->
+
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">		
+
+		<!-- Fontawesome CSS -->
+
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">		
+
+		<!-- Feathericon CSS -->
+
+        <link rel="stylesheet" href="assets/css/feathericon.min.css">		
+
+		<!-- Datatables CSS -->
+
+		<link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">		
+
+		<!-- Main CSS -->
+
+        <link rel="stylesheet" href="assets/css/style.css">		
+
+		<!--[if lt IE 9]>
+
+			<script src="assets/js/html5shiv.min.js"></script>
+
+			<script src="assets/js/respond.min.js"></script>
+
+		<![endif]-->		
+
+    </head>
+
+    <body>
+	
+		<!-- Main Wrapper -->
+        <div class="main-wrapper">		
+			<!-- Header -->
+            <div class="header">			
+				<!-- Logo -->
+                <div class="header-left">
+                    <a href="index.html" class="logo">
+						<img src="assets/img/maxim_logo.png" alt="Logo">
+					</a>
+					<a href="index.html" class="logo logo-small">
+						<img src="assets/img/logo-small.png" alt="Logo" width="30" height="30">
+					</a>
+                </div>
+				<!-- /Logo -->
+				
+				<a href="javascript:void(0);" id="toggle_btn">
+					<i class="fe fe-text-align-left"></i>
+				</a>
+				
+				<!-- Mobile Menu Toggle -->
+				<a class="mobile_btn" id="mobile_btn">
+					<i class="fa fa-bars"></i>
+				</a>
+				<!-- /Mobile Menu Toggle -->				
+            </div>
+			<!-- /Header -->			
+			<!-- Sidebar -->
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-inner slimscroll">
+					<div id="sidebar-menu" class="sidebar-menu">
+						<ul>
+							<li> 
+								<a href="index.html"><i class="fe fe-home"></i> <span style="color:#ff0;">Dashboard</span></a>
+							</li>
+                            <li>
+                            	<a href="javascript:void(0);"><i class="fa fa-gear"></i><span>Masters</span></a>
+                            </li>
+                            <li class="submenu">
+                            	<a href="javascript:void(0);"><i class="fa fa-cubes"></i><span>Procurement</span><span class="menu-arrow"></span></a>
+                                <ul class="smenu">
+                                	<li class="submenu"><a href="javascript:void(0);"><span>Masters</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="procurment_master_item_master.html">Item Master</a></li>
+                                            <li><a href="procurment_master_item_category_master.html">Item Category Master</a></li>
+                                            <li><a href="procurment_master_tax_code_master.html">Tax Code Master</a></li>
+											<li><a href="procurment_master_unit_master.html">Unit Master</a></li>
+                                            <li><a href="procurment_master_ware_house_master.html">Ware House Master</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Transactions</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            
+											<li><a href="procurment_transactions_material_request.html">Material Request</a></li>
+                                            <li><a href="procurment_transactions_material_issue.html">Material Issue</a></li>
+                                            <li><a href="procurment_transactions_material_receipts.html">Material Receipts</a></li>
+											<li><a href="procurment_transactions_material_consumption.html">Material Consumption</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Reports</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Report 1</a></li>
+                                            <li><a href="javascript:void(0);">Report 2</a></li>
+                                            <li><a href="javascript:void(0);">Report 3</a></li>
+                                            <li><a href="javascript:void(0);">Report 4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="submenu">
+                            	<a href="javascript:void(0);"><i class="fa fa-bank"></i><span>Accounts</span><span class="menu-arrow"></span></a>
+                                <ul class="smenu">
+                                	<li><a href="account_master.html"><span>Masters</span> </a></li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Transactions</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Transactions 1</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 2</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 3</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Reports</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Report 1</a></li>
+                                            <li><a href="javascript:void(0);">Report 2</a></li>
+                                            <li><a href="javascript:void(0);">Report 3</a></li>
+                                            <li><a href="javascript:void(0);">Report 4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="submenu">
+                            	<a href="javascript:void(0);"><i class="fa fa-group"></i><span>HR & Payroll</span><span class="menu-arrow"></span></a>
+                                <ul class="smenu">
+                                	<li><a href="payroll_master.html" class="active"><span>Masters</span></a> </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Transactions</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="employee_detail.html"><span>Employee Detail</span></a></li>
+                                            <li><a href="attendance.html"><span>Attendance</span></a></li>
+                                            <li><a href="employee_earnings_deductions.html"><span>Earnings & Deductions</span></a></li>
+                                            <li><a href="monthly_deductions.html"><span>Monthly Deductions</span></a></li>
+                                            <li><a href="monthly_earnings.html"><span>Monthly Earnings</span></a></li>
+                                            <li><a href="payroll_processing.html"><span>Payroll Processing</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Reports</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Report 1</a></li>
+                                            <li><a href="javascript:void(0);">Report 2</a></li>
+                                            <li><a href="javascript:void(0);">Report 3</a></li>
+                                            <li><a href="javascript:void(0);">Report 4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+							<li class="submenu">
+                            	<a href="javascript:void(0);"><i class="fa fa-gears"></i><span>Maintenance</span><span class="menu-arrow"></span></a>
+                                <ul class="smenu">
+                                	<li class="submenu"><a href="javascript:void(0);"><span>Masters</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Masters 1</a></li>
+                                            <li><a href="javascript:void(0);">Masters 2</a></li>
+                                            <li><a href="javascript:void(0);">Masters 3</a></li>
+                                            <li><a href="javascript:void(0);">Masters 4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Transactions</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Transactions 1</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 2</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 3</a></li>
+                                            <li><a href="javascript:void(0);">Transactions 4</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="submenu"><a href="javascript:void(0);"><span>Reports</span> <span class="menu-arrow"></span></a>
+                                    	<ul class="smenu">
+                                            <li><a href="javascript:void(0);">Report 1</a></li>
+                                            <li><a href="javascript:void(0);">Report 2</a></li>
+                                            <li><a href="javascript:void(0);">Report 3</a></li>
+                                            <li><a href="javascript:void(0);">Report 4</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+							<li class="submenu">
+                            	<a href="javascript:void(0);"><i class="fa fa-gears"></i><span>Settings</span><span class="menu-arrow"></span></a>
+                                <ul class="smenu">
+									<li><a href="manageeuser.html"><i class="fe fe-users"></i> <span>Manage User</span></a></li>
+									<li><a href="changepassword.html"><i class="fa fa-unlock-alt" aria-hidden="true"></i> <span>Change Password</span></a></li>
+								</ul>					
+							</li>
+							<li><a href="login.html"><i class="fa fa-power-off" aria-hidden="true"></i> <span style="color:#ff0;">Logout</span></a>
+						</ul>
+					</div>
+                </div>
+            </div>
+			<!-- /Sidebar -->				
+
+			<!-- Page Wrapper -->
+
+            <div class="page-wrapper">
+
+                <div class="content container-fluid">				
+
+					<!-- Page Header -->
+
+					<div class="page-header">
+
+						<div class="row">
+
+							<div class="col-sm-7 col-auto">
+
+								<h3 class="page-title">Add Employee</h3>
+
+								<ul class="breadcrumb">
+
+									<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+
+									<li class="breadcrumb-item"><a href="#null">Payroll</a></li>
+
+									<li class="breadcrumb-item"><a href="payroll_index.html">Master</a></li>
+
+									<li class="breadcrumb-item active">Add Employee</li>
+
+								</ul>
+
+							</div>
+
+							<div class="col-sm-5 col">
+
+								<a href="#null" data-toggle="modal" class="btn btn-success float-right mt-2">Submit Form</a>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<!-- /Page Header -->
+
+					<div class="row">
+
+						<div class="col-sm-12">							
+
+							<div class="accordion" id="accordionAddEmployee">						
+
+								<div class="card">
+
+									<div class="card-header no_bb" id="AddEmployee1" role="tab" >
+
+										<h4 class="mb-0" data-toggle="collapse" data-target="#Employee1">General Information	<i class="fa fa-plus"></i></h4>
+
+									</div>
+
+									<div id="Employee1" class="collapse in show" aria-labelledby="AddEmployee1" data-parent="#accordionAddEmployee">
+
+										<div class="card-body">
+
+											<div class="row">
+
+												<div class="col-md-2">
+
+													<input type="file" id="file1" name="image" accept="image/*" capture style="display:none"/>
+
+													<img src="assets/img/defaultProfilePic.png" id="upfile1" style="cursor:pointer; width: 135px; height: 145px; border: 1px solid #d9d9d9; padding: 10px; border-radius: 3px;" />
+
+												</div>
+
+												<div class="col-md-10" tabindex="1">
+
+													<div class="row">
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">Employee Code </label>
+
+																<div class="col-md-8">
+
+																	<input type="text" class="form-control" placeholder="Enter Employee Code" >
+
+																</div>
+
+															</div>
+
+														</div>
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">Name </label>
+
+																<div class="col-md-8">
+
+																	<input type="text" class="form-control" placeholder="Enter Employee Name" >
+
+																</div>
+
+															</div>
+
+														</div>
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">Joining Date </label>
+
+																<div class="col-md-8">
+
+																	<input type="date" class="form-control" placeholder="" >
+
+																</div>
+
+															</div>
+
+														</div>
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">Applicable Date </label>
+
+																<div class="col-md-8">
+
+																	<input type="date" class="form-control" placeholder="" >
+
+																</div>
+
+															</div>
+
+														</div>
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">Designation</label>
+
+																<div class="col-md-8">
+
+																	<select class="form-control">
+
+																		<option>Designation </option>
+
+																		<option>Designation 1</option>
+
+																		<option>Designation 2</option>
+
+																	</select>
+
+																</div>
+
+															</div>
+
+														</div>
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">Category </label>
+
+																<div class="col-md-8">
+
+																	<select class="form-control">
+
+																		<option>Category </option>
+
+																		<option>Category 1</option>
+
+																		<option>Category 2</option>
+
+																	</select>
+
+																</div>
+
+															</div>
+
+														</div>
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">Department </label>
+
+																<div class="col-md-8">
+
+																	<select class="form-control">
+
+																		<option>Department </option>
+
+																		<option>Department 1</option>
+
+																		<option>Department 2</option>
+
+																	</select>
+
+																</div>
+
+															</div>
+
+														</div>
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">Location </label>
+
+																<div class="col-md-8">
+
+																	<select class="form-control">
+
+																		<option>Location </option>
+
+																		<option>Location 1</option>
+
+																		<option>Location 2</option>
+
+																	</select>
+
+																</div>
+
+															</div>
+
+														</div>
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">Employee Status </label>
+
+																<div class="col-md-8">
+
+																	<select class="form-control">
+
+																		<option>Status </option>
+
+																		<option>Status 1</option>
+
+																		<option>Status 2</option>
+
+																	</select>
+
+																</div>
+
+															</div>
+
+														</div>
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">Last Working Dt </label>
+
+																<div class="col-md-8">
+
+																	<input type="date" class="form-control" placeholder="" >
+
+																</div>
+
+															</div>
+
+														</div>
+
+													</div>
+
+												</div>
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div>
+
+								<div class="card">
+
+									<div class="card-header no_bb" id="AddEmployee2" role="tab" >
+
+										<h4 class="mb-0" data-toggle="collapse" data-target="#Employee2">Personal Information  	<i class="fa fa-plus"></i></h4>
+
+									</div>
+
+									<div id="Employee2" class="collapse" aria-labelledby="AddEmployee2" data-parent="#accordionAddEmployee">
+
+										<div class="card-body">
+
+											<div class="row">												
+
+												<div class="col-md-12">
+
+													<div class="row">
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">Gender</label>
+
+																<div class="col-md-8">
+
+																	<select class="form-control">
+
+																		<option>Select Gender</option>
+
+																		<option>Male </option>
+
+																		<option>Female</option>
+
+																	</select>
+
+																</div>
+
+															</div>
+
+														</div>
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">Date Of Birth </label>
+
+																<div class="col-md-8">
+
+																	<input type="date" class="form-control" placeholder="" >
+
+																</div>
+
+															</div>
+
+														</div>
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">Nationality </label>
+
+																<div class="col-md-8">
+
+																	<input type="text" class="form-control" placeholder="Enter Nationality" >
+
+																</div>
+
+															</div>
+
+														</div>
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">Religion </label>
+
+																<div class="col-md-8">
+
+																	<input type="text" class="form-control" placeholder="Enter Religion" >
+
+																</div>
+
+															</div>
+
+														</div>
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">Caste </label>
+
+																<div class="col-md-8">
+
+																	<input type="text" class="form-control" placeholder="Enter Caste" >
+
+																</div>
+
+															</div>
+
+														</div>
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">Marital Status </label>
+
+																<div class="col-md-8">
+
+																	<select class="form-control">
+
+																		<option>Marital Status </option>
+
+																		<option>Single</option>
+
+																		<option>Married</option>
+
+																	</select>
+
+																</div>
+
+															</div>
+
+														</div>
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">Mobile </label>
+
+																<div class="col-md-8">
+
+																	<input type="text" class="form-control" placeholder="Enter Mobile" >
+
+																</div>
+
+															</div>
+
+														</div>
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">Email </label>
+
+																<div class="col-md-8">
+
+																	<input type="email" class="form-control" placeholder="Enter Email" >
+
+																</div>
+
+															</div>
+
+														</div>
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">Aadhar Number </label>
+
+																<div class="col-md-8">
+
+																	<input type="text" class="form-control" placeholder="Enter Aadhar Number" >
+
+																</div>
+
+															</div>
+
+														</div>
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">Education </label>
+
+																<div class="col-md-8">
+
+																	<input type="text" class="form-control" placeholder="Education Qualification" >
+
+																</div>
+
+															</div>
+
+														</div>
+
+													</div>
+
+												</div>
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div>
+
+								<div class="card">
+
+									<div class="card-header no_bb" id="AddEmployee3" role="tab" >
+
+										<h4 class="mb-0" data-toggle="collapse" data-target="#Employee3">Address Details   <i class="fa fa-plus"></i></h4>
+
+									</div>
+
+									<div id="Employee3" class="collapse" aria-labelledby="AddEmployee3" data-parent="#accordionAddEmployee">
+
+										<div class="card-body">
+
+											<div class="row">
+
+												<div class="col-md-6">
+
+													<div class="form-group row">
+
+														<label class="col-md-4 col-form-label">Present Address </label>
+
+														<div class="col-md-8">
+
+															<input type="text" class="form-control" placeholder="Enter Address" >
+
+														</div>
+
+													</div>
+
+													<div class="form-group row">
+
+														<label class="col-md-4 col-form-label">City </label>
+
+														<div class="col-md-8">
+
+															<input type="text" class="form-control" placeholder="Enter City" >
+
+														</div>
+
+													</div>
+
+													<div class="form-group row">
+
+														<label class="col-md-4 col-form-label">Pin Code </label>
+
+														<div class="col-md-8">
+
+															<input type="text" class="form-control" placeholder="Enter Pin Code" >
+
+														</div>
+
+													</div>
+
+													<div class="form-group row">
+
+														<label class="col-md-4 col-form-label">Phone Number  </label>
+
+														<div class="col-md-8">
+
+															<input type="text" class="form-control" placeholder="Enter Phone Number " >
+
+														</div>
+
+													</div>
+
+												</div>
+
+												<div class="col-md-6">
+
+													<div class="form-group"  style="min-height: 40px;">														
+
+														<div class="custom-control custom-checkbox mr-sm-2">
+
+															<input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+
+															<label class="custom-control-label" for="customControlAutosizing">Same As Present Address </label>
+
+														</div>
+
+													</div>
+
+													<div class="form-group row">
+
+														<label class="col-md-4 col-form-label">Permanent Address </label>
+
+														<div class="col-md-8">
+
+															<input type="text" class="form-control" placeholder="Enter Address" >
+
+														</div>
+
+													</div>
+
+													<div class="form-group row">
+
+														<label class="col-md-4 col-form-label">City </label>
+
+														<div class="col-md-8">
+
+															<input type="text" class="form-control" placeholder="Enter City" >
+
+														</div>
+
+													</div>
+
+													<div class="form-group row">
+
+														<label class="col-md-4 col-form-label">Pin Code </label>
+
+														<div class="col-md-8">
+
+															<input type="text" class="form-control" placeholder="Enter Pin Code" >
+
+														</div>
+
+													</div>
+
+												</div>
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div>
+
+								<div class="card">
+
+									<div class="card-header no_bb" id="AddEmployee4" role="tab">
+
+										<h4 class="mb-0" data-toggle="collapse" data-target="#Employee4">Previous Experience 	<i class="fa fa-plus"></i></h4>
+
+									</div>
+
+									<div id="Employee4" class="collapse" aria-labelledby="AddEmployee4" data-parent="#accordionAddEmployee">
+
+										<div class="card-body">
+
+											<div class="table-responsive">
+
+												<table class="table table-bordered">
+
+												  <thead>
+
+													<tr>
+
+													  <th scope="col">Organization Name</th>
+
+													  <th scope="col">From Date</th>
+
+													  <th scope="col">To Date</th>
+
+													  <th scope="col">Total Experience</th>
+
+													  <th scope="col">Designation</th>
+
+													  <th scope="col">Last Drawn Salary</th>
+
+													  <th  colspan="2">Action</th>
+
+													</tr>
+
+												  </thead>
+
+												  <tbody>
+
+													<tr>
+
+													  <td><input type="text" class="form-control" placeholder="Organization Name" ></td>
+
+													  <td><input type="date" class="form-control" placeholder="From Date" ></td>
+
+													  <td><input type="date" class="form-control" placeholder="To Date" ></td>
+
+													  <td><input type="text" class="form-control" placeholder="Total Experience" ></td>
+
+													  <td><input type="text" class="form-control" placeholder="Designation" ></td>
+
+													  <td><input type="text" class="form-control" placeholder="Last Drawn Salary" ></td>
+
+													  <td><i class="fa fa-plus"></i></td>
+
+													  <td style="color:#ff0000;"><i class="fa fa-close" aria-hidden="true"></i></td>
+
+													</tr>
+
+													<tr>
+
+													  <td><input type="text" class="form-control" placeholder="Organization Name" ></td>
+
+													  <td><input type="date" class="form-control" placeholder="From Date" ></td>
+
+													  <td><input type="date" class="form-control" placeholder="To Date" ></td>
+
+													  <td><input type="text" class="form-control" placeholder="Total Experience" ></td>
+
+													  <td><input type="text" class="form-control" placeholder="Designation" ></td>
+
+													  <td><input type="text" class="form-control" placeholder="Last Drawn Salary" ></td>
+
+													  <td><i class="fa fa-plus"></i></td>
+
+													  <td style="color:#ff0000;"><i class="fa fa-close" aria-hidden="true"></i></td>
+
+													</tr>
+
+													
+
+												  </tbody>
+
+												</table>
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div>								
+
+								<div class="card">
+
+									<div class="card-header no_bb" id="AddEmployee5" role="tab" >
+
+										<h4 class="mb-0" data-toggle="collapse" data-target="#Employee5">Statutory Information 	<i class="fa fa-plus"></i></h4>
+
+									</div>
+
+									<div id="Employee5" class="collapse" aria-labelledby="AddEmployee5" data-parent="#accordionAddEmployee">
+
+										<div class="card-body">
+
+											<div class="row">												
+
+												<div class="col-md-12">
+
+													<div class="row">
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">Gross </label>
+
+																<div class="col-md-8">
+
+																	<input type="text" class="form-control" placeholder="Enter Gross" >
+
+																</div>
+
+															</div>
+
+														</div>
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">Basic  </label>
+
+																<div class="col-md-8">
+
+																	<input type="text" class="form-control" placeholder="Enter Basic" >
+
+																</div>
+
+															</div>
+
+														</div>
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">Pan Number  </label>
+
+																<div class="col-md-8">
+
+																	<input type="text" class="form-control" placeholder="Enter Pan Number" >
+
+																</div>
+
+															</div>
+
+														</div>
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">PF Contribution  </label>
+
+																<div class="col-md-8">
+
+																	<select class="form-control">
+
+																		<option>Select PF Contribution</option>
+
+																		<option>Yes</option>
+
+																		<option>No</option>
+
+																	</select>
+
+																</div>
+
+															</div>
+
+														</div>
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">PF Number </label>
+
+																<div class="col-md-8">
+
+																	<input type="text" class="form-control" placeholder="Enter PF Number" >
+
+																</div>
+
+															</div>
+
+														</div>
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">ESI Contribution  </label>
+
+																<div class="col-md-8">
+
+																	<select class="form-control">
+
+																		<option>Select ESI Contribution</option>
+
+																		<option>Yes</option>
+
+																		<option>No</option>
+
+																	</select>
+
+																</div>
+
+															</div>
+
+														</div>
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">ESI Number </label>
+
+																<div class="col-md-8">
+
+																	<input type="text" class="form-control" placeholder="Enter ESI Number" >
+
+																</div>
+
+															</div>
+
+														</div>														
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">IS OT </label>
+
+																<div class="col-md-8">
+
+																	<select class="form-control">
+
+																		<option>Select IS OT</option>
+
+																		<option>Yes</option>
+
+																		<option>No</option>
+
+																	</select>
+
+																</div>
+
+															</div>
+
+														</div>
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">OT Amount  </label>
+
+																<div class="col-md-8">
+
+																	<input type="text" class="form-control" placeholder="Enter OT Amount " >
+
+																</div>
+
+															</div>
+
+														</div>
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">Universal Account #  </label>
+
+																<div class="col-md-8">
+
+																	<input type="text" class="form-control" placeholder="Enter UAN" >
+
+																</div>
+
+															</div>
+
+														</div>
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">Grade Pay </label>
+
+																<div class="col-md-8">
+
+																	<select class="form-control">
+
+																		<option>GPAY00001 - 7th Grade Pay</option>
+
+																	</select>
+
+																</div>
+
+															</div>
+
+														</div>
+
+														
+
+													</div>
+
+												</div>
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div>
+
+								<div class="card">
+
+									<div class="card-header no_bb" id="AddEmployee6" role="tab" >
+
+										<h4 class="mb-0" data-toggle="collapse" data-target="#Employee6">Bank Information 	<i class="fa fa-plus"></i></h4>
+
+									</div>
+
+									<div id="Employee6" class="collapse" aria-labelledby="AddEmployee6" data-parent="#accordionAddEmployee">
+
+										<div class="card-body">
+
+											<div class="row">												
+
+												<div class="col-md-12">
+
+													<div class="row">														
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">Bank Name </label>
+
+																<div class="col-md-8">
+
+																	<input type="text" class="form-control" placeholder="Bank Name " >
+
+																</div>
+
+															</div>
+
+														</div>
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">Account Number  </label>
+
+																<div class="col-md-8">
+
+																	<input type="text" class="form-control" placeholder="Enter Account Number " >
+
+																</div>
+
+															</div>
+
+														</div>
+
+														<div class="col-md-6">
+
+															<div class="form-group row">
+
+																<label class="col-md-4 col-form-label">IFSC Code </label>
+
+																<div class="col-md-8">
+
+																	<input type="text" class="form-control" placeholder="Enter IFSC Code" >
+
+																</div>
+
+															</div>
+
+														</div>
+
+														
+
+													</div>
+
+												</div>
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div>
+
+							</div>							
+
+								<!-- <div class="card">
+
+									<div class="card-header no_bb" id="faqs6">
+
+										<h4 class="mb-0" data-toggle="collapse" data-target="#faq6"> How do I make my monthly payments?	<i class="fa fa-plus"></i></h4>
+
+									</div>
+
+									<div id="faq6" class="collapse" aria-labelledby="faqs6" data-parent="#accordionExample">
+
+										<div class="card-body">
+
+											<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,</p>
+
+										</div>
+
+									</div>
+
+								</div> -->
+
+							</div>
+
+							
+
+							
+
+						</div>			
+
+					</div>
+
+				</div>			
+
+			</div>
+
+			<!-- /Page Wrapper -->
+
+			
+
+			
+
+			
+
+        </div>
+
+		<!-- /Main Wrapper -->
+
+		
+
+		<!-- jQuery -->
+
+        <script src="assets/js/jquery-3.2.1.min.js"></script>
+
+		
+
+		<!-- Bootstrap Core JS -->
+
+        <script src="assets/js/popper.min.js"></script>
+
+        <script src="assets/js/bootstrap.min.js"></script>
+
+		
+
+		<!-- Slimscroll JS -->
+
+        <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+		
+
+		<!-- Datatables JS -->
+
+		<script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+
+		<script src="assets/plugins/datatables/datatables.min.js"></script>
+
+		
+
+		<!-- Custom JS -->
+
+		<script  src="assets/js/script.js"></script>
+
+		<script>
+
+			$(document).ready(function(){
+
+				// Add minus icon for collapse element which is open by default
+
+				$(".collapse.show").each(function(){
+
+					$(this).prev(".card-header").find(".fa").addClass("fa-minus").removeClass("fa-plus");
+
+				});
+
+				
+
+				// Toggle plus minus icon on show hide of collapse element
+
+				$(".collapse").on('show.bs.collapse', function(){
+
+					$(this).prev(".card-header").find(".fa").removeClass("fa-plus").addClass("fa-minus");
+
+				}).on('hide.bs.collapse', function(){
+
+					$(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
+
+				});
+
+				$(".collapse.show").each(function(){
+
+					$(this).prev(".card-header").addClass("bb").removeClass("no_bb");
+
+				});
+
+				
+
+				// Toggle plus minus icon on show hide of collapse element
+
+				$(".collapse").on('show.bs.collapse', function(){
+
+					$(this).prev(".card-header").removeClass("no_bb").addClass("bb");
+
+				}).on('hide.bs.collapse', function(){
+
+					$(this).prev(".card-header").removeClass("bb").addClass("no_bb");
+
+				});
+
+			});
+
+		
+
+		var input = document.querySelector('input[type=file]'); // see Example 4
+
+			input.onchange = function () {
+
+			  var file = input.files[0];
+
+			  drawOnCanvas(file);   // see Example 6
+
+			  displayAsImage(file); // see Example 7
+
+			};
+
+			function drawOnCanvas(file) {
+
+			  var reader = new FileReader();
+
+
+
+			  reader.onload = function (e) {
+
+				var dataURL = e.target.result,
+
+					c = document.querySelector('canvas'), // see Example 4
+
+					ctx = c.getContext('2d'),
+
+					img = new Image();
+
+
+
+				img.onload = function() {
+
+				  c.width = img.width;
+
+				  c.height = img.height;
+
+				  ctx.drawImage(img, 0, 0);
+
+				};
+
+
+
+				img.src = dataURL;
+
+			  };
+
+
+
+			  reader.readAsDataURL(file);
+
+			}
+
+
+
+			function displayAsImage(file) {
+
+			  var imgURL = URL.createObjectURL(file),
+
+				  img = document.createElement('img');
+
+
+
+			  img.onload = function() {
+
+				URL.revokeObjectURL(imgURL);
+
+			  };
+
+
+
+			  img.src = imgURL;
+
+			  document.body.appendChild(img);
+
+			}
+
+
+
+			$("#upfile1").click(function () {
+
+				$("#file1").trigger('click');
+
+			});
+
+			$("#upfile2").click(function () {
+
+				$("#file2").trigger('click');
+
+			});
+
+			$("#upfile3").click(function () {
+
+				$("#file3").trigger('click');
+
+			});
+
+		</script>
+
+    </body>
+
+
+
+</html>
